@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "C:/Users/LiuUtin/Desktop/Green cube/Green_Cube/Green_Cube.runs/synth_1/Top.tcl"
+  variable script "C:/Users/LiuUtin/Desktop/Green_Cube/Green_Cube/Green_Cube.runs/synth_1/Top.tcl"
   variable category "vivado_synth"
 }
 
@@ -72,7 +72,6 @@ proc create_report { reportName command } {
 OPTRACE "synth_1" START { ROLLUP_AUTO }
 set_param chipscope.maxJobs 2
 set_param xicom.use_bs_reader 1
-set_msg_config -id {Common 17-41} -limit 10000000
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a35tcpg236-1
 
@@ -80,27 +79,28 @@ set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir {C:/Users/LiuUtin/Desktop/Green cube/Green_Cube/Green_Cube.cache/wt} [current_project]
-set_property parent.project_path {C:/Users/LiuUtin/Desktop/Green cube/Green_Cube/Green_Cube.xpr} [current_project]
+set_property webtalk.parent_dir C:/Users/LiuUtin/Desktop/Green_Cube/Green_Cube/Green_Cube.cache/wt [current_project]
+set_property parent.project_path C:/Users/LiuUtin/Desktop/Green_Cube/Green_Cube/Green_Cube.xpr [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property ip_repo_paths {{c:/Users/LiuUtin/Desktop/Green cube/ip}} [current_project]
+set_property ip_repo_paths c:/Users/LiuUtin/Desktop/Green_Cube/ip [current_project]
 update_ip_catalog
-set_property ip_output_repo {c:/Users/LiuUtin/Desktop/Green cube/Green_Cube/Green_Cube.cache/ip} [current_project]
+set_property ip_output_repo c:/Users/LiuUtin/Desktop/Green_Cube/Green_Cube/Green_Cube.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_verilog -library xil_defaultlib {
-  {C:/Users/LiuUtin/Desktop/Green cube/KeyboardDecoder.v}
-  {C:/Users/LiuUtin/Desktop/Green cube/clk_div.v}
-  {C:/Users/LiuUtin/Desktop/Green cube/floor.v}
-  {C:/Users/LiuUtin/Desktop/Green cube/onepulse.v}
-  {C:/Users/LiuUtin/Desktop/Green cube/pixel_gen.v}
-  {C:/Users/LiuUtin/Desktop/Green cube/slime_move.v}
-  {C:/Users/LiuUtin/Desktop/Green cube/vga_controller.v}
-  {C:/Users/LiuUtin/Desktop/Green cube/top.v}
+  C:/Users/LiuUtin/Desktop/Green_Cube/KeyboardDecoder.v
+  C:/Users/LiuUtin/Desktop/Green_Cube/clk_div.v
+  C:/Users/LiuUtin/Desktop/Green_Cube/debounce.v
+  C:/Users/LiuUtin/Desktop/Green_Cube/floor.v
+  C:/Users/LiuUtin/Desktop/Green_Cube/onepulse.v
+  C:/Users/LiuUtin/Desktop/Green_Cube/pixel_gen.v
+  C:/Users/LiuUtin/Desktop/Green_Cube/slime_move.v
+  C:/Users/LiuUtin/Desktop/Green_Cube/vga_controller.v
+  C:/Users/LiuUtin/Desktop/Green_Cube/top.v
 }
-read_ip -quiet {{C:/Users/LiuUtin/Desktop/Green cube/Green_Cube/Green_Cube.srcs/sources_1/ip/KeyboardCtrl_0/KeyboardCtrl_0.xci}}
+read_ip -quiet C:/Users/LiuUtin/Desktop/Green_Cube/Green_Cube/Green_Cube.srcs/sources_1/ip/KeyboardCtrl_0/KeyboardCtrl_0.xci
 
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -111,8 +111,8 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc {{C:/Users/LiuUtin/Desktop/Green cube/cons.xdc}}
-set_property used_in_implementation false [get_files {{C:/Users/LiuUtin/Desktop/Green cube/cons.xdc}}]
+read_xdc C:/Users/LiuUtin/Desktop/Green_Cube/cons.xdc
+set_property used_in_implementation false [get_files C:/Users/LiuUtin/Desktop/Green_Cube/cons.xdc]
 
 set_param ips.enableIPCacheLiteLoad 1
 close [open __synthesis_is_running__ w]

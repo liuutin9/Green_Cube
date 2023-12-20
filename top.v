@@ -19,6 +19,8 @@ module Top(clk, rst, vgaRed, vgaBlue, vgaGreen, hsync, vsync, PS2_DATA, PS2_CLK)
     wire [10:0] floor_pos_x0, floor_pos_y0, floor_pos_x1, floor_pos_y1, floor_pos_x2, floor_pos_y2, floor_pos_x3, floor_pos_y3;
     wire [3:0] enable;
 
+    wire rst_db, rst_op;
+
 	// keyboard
 	parameter [8:0] KEY_A = 9'h01c;
     parameter [8:0] KEY_D = 9'h023;
@@ -26,10 +28,16 @@ module Top(clk, rst, vgaRed, vgaBlue, vgaGreen, hsync, vsync, PS2_DATA, PS2_CLK)
     wire [8:0] last_change;
     wire been_ready;
 	reg [1:0] key_state;
+
+    wire hit_ceiling;
+    wire [8:0] time_gap;
 	
 	//clock
 	clk_div #(2) CD0(.clk(clk), .clk_d(clk_d2));
 	clk_div #(19) CD1(.clk(clk), .clk_d(clk_18));
+
+    debounce DB_RST(.s(rst), .s_db(rst_db), .clk(clk));
+    //onepulse OP_RST(.s(rst_db), .s_op(rst_op), .clk(clk));
 
 	pixel_gen PG(
 		.h_cnt(h_cnt),
@@ -52,8 +60,8 @@ module Top(clk, rst, vgaRed, vgaBlue, vgaGreen, hsync, vsync, PS2_DATA, PS2_CLK)
 	);
 
     floor_gen FG(
-        .rst(rst),
-		.clk(clk),
+        .rst(rst_db),
+		.clk(clk_18),
         .floor_pos_x0(floor_pos_x0),
         .floor_pos_y0(floor_pos_y0),
         .floor_pos_x1(floor_pos_x1),
@@ -62,11 +70,13 @@ module Top(clk, rst, vgaRed, vgaBlue, vgaGreen, hsync, vsync, PS2_DATA, PS2_CLK)
         .floor_pos_y2(floor_pos_y2),
         .floor_pos_x3(floor_pos_x3),
         .floor_pos_y3(floor_pos_y3),
-        .enable(enable)
+        .enable(enable),
+        .time_gap(time_gap),
+        .hit_ceiling(hit_ceiling)
     );
 
 	slime_move SM(
-		.rst(rst),
+		.rst(rst_db),
 		.clk(clk),
         .clk_vga(clk_18),
 		.x(slime_pos_x),
@@ -80,7 +90,9 @@ module Top(clk, rst, vgaRed, vgaBlue, vgaGreen, hsync, vsync, PS2_DATA, PS2_CLK)
         .floor_pos_y2(floor_pos_y2),
         .floor_pos_x3(floor_pos_x3),
         .floor_pos_y3(floor_pos_y3),
-        .enable(enable)
+        .enable(enable),
+        .time_gap(time_gap),
+        .hit_ceiling(hit_ceiling)
 	);
 
 	KeyboardDecoder key_de (
@@ -89,13 +101,13 @@ module Top(clk, rst, vgaRed, vgaBlue, vgaGreen, hsync, vsync, PS2_DATA, PS2_CLK)
         .key_valid(been_ready),
         .PS2_DATA(PS2_DATA),
         .PS2_CLK(PS2_CLK),
-        .rst(rst),
+        .rst(rst_db),
         .clk(clk)
     );
 
     vga_controller VC0(
         .pclk(clk_d2),
-        .reset(rst),
+        .reset(rst_db),
         .hsync(hsync),
         .vsync(vsync),
         .valid(valid),
