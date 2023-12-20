@@ -37,7 +37,7 @@ module Top(clk, rst, vgaRed, vgaBlue, vgaGreen, hsync, vsync, PS2_DATA, PS2_CLK)
 	clk_div #(19) CD1(.clk(clk), .clk_d(clk_18));
 
     debounce DB_RST(.s(rst), .s_db(rst_db), .clk(clk));
-    //onepulse OP_RST(.s(rst_db), .s_op(rst_op), .clk(clk));
+    onepulse OP_RST(.s(rst_db), .s_op(rst_op), .clk(clk));
 
 	pixel_gen PG(
 		.h_cnt(h_cnt),
@@ -61,7 +61,8 @@ module Top(clk, rst, vgaRed, vgaBlue, vgaGreen, hsync, vsync, PS2_DATA, PS2_CLK)
 
     floor_gen FG(
         .rst(rst_db),
-		.clk(clk_18),
+		.clk(clk),
+        .clk_vga(clk_18),
         .floor_pos_x0(floor_pos_x0),
         .floor_pos_y0(floor_pos_y0),
         .floor_pos_x1(floor_pos_x1),

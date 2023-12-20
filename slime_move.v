@@ -32,29 +32,38 @@ floor_pos_x2, floor_pos_y2, floor_pos_x3, floor_pos_y3, enable, time_gap, hit_ce
         end
     end
 
-    always @ (posedge clk_vga) begin
+    always @ (posedge clk) begin
         if (rst) x <= 10'd310;
-        else begin
+        else if (clk_vga) begin
             case (h_state)
                 LEFT: x <= (x >= 1) ? x - 1 : 10'd619;
                 RIGHT: x <= (x + 1 > 10'd619) ? 10'd0 : x + 1;
                 default: x <= x;
             endcase
         end
+        else begin
+            x <= x;
+        end
     end
 
-    always @ (posedge clk_vga)begin
+    always @ (posedge clk)begin
         if (rst) begin
             y <= 10'd379;
             state <= FALL_DOWN;
             time_gap <= 9'd1;
             hit_ceiling <= 1'b0;
         end
-        else begin
+        else if (clk_vga) begin
             y <= next_y;
             state <= next_state;
             time_gap <= next_time_gap;
             hit_ceiling <= next_hit_ceiling;
+        end
+        else begin
+            y <= y;
+            state <= state;
+            time_gap <= time_gap;
+            hit_ceiling <= hit_ceiling;
         end
     end
     
