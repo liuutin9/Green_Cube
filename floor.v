@@ -32,14 +32,14 @@ floor_pos_x2, floor_pos_y2, floor_pos_x3, floor_pos_y3, enable, time_gap, hit_ce
         end
         else begin
             enable <= 4'b1111;
-            floor_pos_x0 <= next_floor_pos_x0;
-            floor_pos_x1 <= next_floor_pos_x1;
-            floor_pos_x2 <= next_floor_pos_x2;
-            floor_pos_x3 <= next_floor_pos_x3;
-            floor_pos_y0 <= next_floor_pos_y0;
-            floor_pos_y1 <= next_floor_pos_y1;
-            floor_pos_y2 <= next_floor_pos_y2;
-            floor_pos_y3 <= next_floor_pos_y3;
+            floor_pos_x0 <= floor_pos_x0;
+            floor_pos_x1 <= floor_pos_x1;
+            floor_pos_x2 <= floor_pos_x2;
+            floor_pos_x3 <= floor_pos_x3;
+            floor_pos_y0 <= floor_pos_y0;
+            floor_pos_y1 <= floor_pos_y1;
+            floor_pos_y2 <= floor_pos_y2;
+            floor_pos_y3 <= floor_pos_y3;
         end
     end
 

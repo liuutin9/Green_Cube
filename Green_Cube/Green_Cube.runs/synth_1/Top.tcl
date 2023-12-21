@@ -92,6 +92,7 @@ OPTRACE "Adding files" START { }
 read_verilog -library xil_defaultlib {
   C:/Users/LiuUtin/Desktop/Green_Cube/KeyboardDecoder.v
   C:/Users/LiuUtin/Desktop/Green_Cube/clk_div.v
+  C:/Users/LiuUtin/Desktop/Green_Cube/clk_vga.v
   C:/Users/LiuUtin/Desktop/Green_Cube/debounce.v
   C:/Users/LiuUtin/Desktop/Green_Cube/floor.v
   C:/Users/LiuUtin/Desktop/Green_Cube/onepulse.v

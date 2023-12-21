@@ -34,7 +34,8 @@ module Top(clk, rst, vgaRed, vgaBlue, vgaGreen, hsync, vsync, PS2_DATA, PS2_CLK)
 	
 	//clock
 	clk_div #(2) CD0(.clk(clk), .clk_d(clk_d2));
-	clk_div #(19) CD1(.clk(clk), .clk_d(clk_18));
+	// clk_div #(19) CD1(.clk(clk), .clk_d(clk_18));
+    clk_vga CV(.rst(rst), .clk(clk), .dclk(clk_18));
 
     debounce DB_RST(.s(rst), .s_db(rst_db), .clk(clk));
     onepulse OP_RST(.s(rst_db), .s_op(rst_op), .clk(clk));

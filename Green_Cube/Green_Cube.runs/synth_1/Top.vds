@@ -2,8 +2,8 @@
 # Vivado v2020.2 (64-bit)
 # SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
 # IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
-# Start of session at: Wed Dec 20 23:39:05 2023
-# Process ID: 16940
+# Start of session at: Thu Dec 21 19:40:44 2023
+# Process ID: 15380
 # Current directory: C:/Users/LiuUtin/Desktop/Green_Cube/Green_Cube/Green_Cube.runs/synth_1
 # Command line: vivado.exe -log Top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Top.tcl
 # Log file: C:/Users/LiuUtin/Desktop/Green_Cube/Green_Cube/Green_Cube.runs/synth_1/Top.vds
@@ -20,9 +20,9 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 14652
+INFO: [Synth 8-7075] Helper process launched with PID 15712
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1005.348 ; gain = 0.000
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1019.176 ; gain = 0.000
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-6157] synthesizing module 'Top' [C:/Users/LiuUtin/Desktop/Green_Cube/top.v:1]
 	Parameter KEY_A bound to: 9'b000011100 
@@ -30,46 +30,47 @@ INFO: [Synth 8-6157] synthesizing module 'Top' [C:/Users/LiuUtin/Desktop/Green_C
 INFO: [Synth 8-6157] synthesizing module 'clk_div' [C:/Users/LiuUtin/Desktop/Green_Cube/clk_div.v:1]
 	Parameter n bound to: 2 - type: integer 
 INFO: [Synth 8-6155] done synthesizing module 'clk_div' (1#1) [C:/Users/LiuUtin/Desktop/Green_Cube/clk_div.v:1]
-INFO: [Synth 8-6157] synthesizing module 'clk_div__parameterized0' [C:/Users/LiuUtin/Desktop/Green_Cube/clk_div.v:1]
-	Parameter n bound to: 19 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'clk_div__parameterized0' (1#1) [C:/Users/LiuUtin/Desktop/Green_Cube/clk_div.v:1]
+INFO: [Synth 8-6157] synthesizing module 'clk_vga' [C:/Users/LiuUtin/Desktop/Green_Cube/clk_vga.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'clk_vga' (2#1) [C:/Users/LiuUtin/Desktop/Green_Cube/clk_vga.v:1]
 INFO: [Synth 8-6157] synthesizing module 'debounce' [C:/Users/LiuUtin/Desktop/Green_Cube/debounce.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'debounce' (2#1) [C:/Users/LiuUtin/Desktop/Green_Cube/debounce.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'debounce' (3#1) [C:/Users/LiuUtin/Desktop/Green_Cube/debounce.v:1]
+INFO: [Synth 8-6157] synthesizing module 'onepulse' [C:/Users/LiuUtin/Desktop/Green_Cube/onepulse.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'onepulse' (4#1) [C:/Users/LiuUtin/Desktop/Green_Cube/onepulse.v:1]
 INFO: [Synth 8-6157] synthesizing module 'pixel_gen' [C:/Users/LiuUtin/Desktop/Green_Cube/pixel_gen.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'pixel_gen' (3#1) [C:/Users/LiuUtin/Desktop/Green_Cube/pixel_gen.v:1]
-WARNING: [Synth 8-689] width (11) of port connection 'floor_pos_x0' does not match port width (10) of module 'pixel_gen' [C:/Users/LiuUtin/Desktop/Green_Cube/top.v:48]
-WARNING: [Synth 8-689] width (11) of port connection 'floor_pos_y0' does not match port width (10) of module 'pixel_gen' [C:/Users/LiuUtin/Desktop/Green_Cube/top.v:49]
-WARNING: [Synth 8-689] width (11) of port connection 'floor_pos_x1' does not match port width (10) of module 'pixel_gen' [C:/Users/LiuUtin/Desktop/Green_Cube/top.v:50]
-WARNING: [Synth 8-689] width (11) of port connection 'floor_pos_y1' does not match port width (10) of module 'pixel_gen' [C:/Users/LiuUtin/Desktop/Green_Cube/top.v:51]
-WARNING: [Synth 8-689] width (11) of port connection 'floor_pos_x2' does not match port width (10) of module 'pixel_gen' [C:/Users/LiuUtin/Desktop/Green_Cube/top.v:52]
-WARNING: [Synth 8-689] width (11) of port connection 'floor_pos_y2' does not match port width (10) of module 'pixel_gen' [C:/Users/LiuUtin/Desktop/Green_Cube/top.v:53]
-WARNING: [Synth 8-689] width (11) of port connection 'floor_pos_x3' does not match port width (10) of module 'pixel_gen' [C:/Users/LiuUtin/Desktop/Green_Cube/top.v:54]
-WARNING: [Synth 8-689] width (11) of port connection 'floor_pos_y3' does not match port width (10) of module 'pixel_gen' [C:/Users/LiuUtin/Desktop/Green_Cube/top.v:55]
+INFO: [Synth 8-6155] done synthesizing module 'pixel_gen' (5#1) [C:/Users/LiuUtin/Desktop/Green_Cube/pixel_gen.v:1]
+WARNING: [Synth 8-689] width (11) of port connection 'floor_pos_x0' does not match port width (10) of module 'pixel_gen' [C:/Users/LiuUtin/Desktop/Green_Cube/top.v:49]
+WARNING: [Synth 8-689] width (11) of port connection 'floor_pos_y0' does not match port width (10) of module 'pixel_gen' [C:/Users/LiuUtin/Desktop/Green_Cube/top.v:50]
+WARNING: [Synth 8-689] width (11) of port connection 'floor_pos_x1' does not match port width (10) of module 'pixel_gen' [C:/Users/LiuUtin/Desktop/Green_Cube/top.v:51]
+WARNING: [Synth 8-689] width (11) of port connection 'floor_pos_y1' does not match port width (10) of module 'pixel_gen' [C:/Users/LiuUtin/Desktop/Green_Cube/top.v:52]
+WARNING: [Synth 8-689] width (11) of port connection 'floor_pos_x2' does not match port width (10) of module 'pixel_gen' [C:/Users/LiuUtin/Desktop/Green_Cube/top.v:53]
+WARNING: [Synth 8-689] width (11) of port connection 'floor_pos_y2' does not match port width (10) of module 'pixel_gen' [C:/Users/LiuUtin/Desktop/Green_Cube/top.v:54]
+WARNING: [Synth 8-689] width (11) of port connection 'floor_pos_x3' does not match port width (10) of module 'pixel_gen' [C:/Users/LiuUtin/Desktop/Green_Cube/top.v:55]
+WARNING: [Synth 8-689] width (11) of port connection 'floor_pos_y3' does not match port width (10) of module 'pixel_gen' [C:/Users/LiuUtin/Desktop/Green_Cube/top.v:56]
 INFO: [Synth 8-6157] synthesizing module 'floor_gen' [C:/Users/LiuUtin/Desktop/Green_Cube/floor.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'floor_gen' (4#1) [C:/Users/LiuUtin/Desktop/Green_Cube/floor.v:1]
-WARNING: [Synth 8-689] width (11) of port connection 'floor_pos_x0' does not match port width (10) of module 'floor_gen' [C:/Users/LiuUtin/Desktop/Green_Cube/top.v:65]
-WARNING: [Synth 8-689] width (11) of port connection 'floor_pos_y0' does not match port width (10) of module 'floor_gen' [C:/Users/LiuUtin/Desktop/Green_Cube/top.v:66]
-WARNING: [Synth 8-689] width (11) of port connection 'floor_pos_x1' does not match port width (10) of module 'floor_gen' [C:/Users/LiuUtin/Desktop/Green_Cube/top.v:67]
-WARNING: [Synth 8-689] width (11) of port connection 'floor_pos_y1' does not match port width (10) of module 'floor_gen' [C:/Users/LiuUtin/Desktop/Green_Cube/top.v:68]
-WARNING: [Synth 8-689] width (11) of port connection 'floor_pos_x2' does not match port width (10) of module 'floor_gen' [C:/Users/LiuUtin/Desktop/Green_Cube/top.v:69]
-WARNING: [Synth 8-689] width (11) of port connection 'floor_pos_y2' does not match port width (10) of module 'floor_gen' [C:/Users/LiuUtin/Desktop/Green_Cube/top.v:70]
-WARNING: [Synth 8-689] width (11) of port connection 'floor_pos_x3' does not match port width (10) of module 'floor_gen' [C:/Users/LiuUtin/Desktop/Green_Cube/top.v:71]
-WARNING: [Synth 8-689] width (11) of port connection 'floor_pos_y3' does not match port width (10) of module 'floor_gen' [C:/Users/LiuUtin/Desktop/Green_Cube/top.v:72]
+INFO: [Synth 8-6155] done synthesizing module 'floor_gen' (6#1) [C:/Users/LiuUtin/Desktop/Green_Cube/floor.v:1]
+WARNING: [Synth 8-689] width (11) of port connection 'floor_pos_x0' does not match port width (10) of module 'floor_gen' [C:/Users/LiuUtin/Desktop/Green_Cube/top.v:67]
+WARNING: [Synth 8-689] width (11) of port connection 'floor_pos_y0' does not match port width (10) of module 'floor_gen' [C:/Users/LiuUtin/Desktop/Green_Cube/top.v:68]
+WARNING: [Synth 8-689] width (11) of port connection 'floor_pos_x1' does not match port width (10) of module 'floor_gen' [C:/Users/LiuUtin/Desktop/Green_Cube/top.v:69]
+WARNING: [Synth 8-689] width (11) of port connection 'floor_pos_y1' does not match port width (10) of module 'floor_gen' [C:/Users/LiuUtin/Desktop/Green_Cube/top.v:70]
+WARNING: [Synth 8-689] width (11) of port connection 'floor_pos_x2' does not match port width (10) of module 'floor_gen' [C:/Users/LiuUtin/Desktop/Green_Cube/top.v:71]
+WARNING: [Synth 8-689] width (11) of port connection 'floor_pos_y2' does not match port width (10) of module 'floor_gen' [C:/Users/LiuUtin/Desktop/Green_Cube/top.v:72]
+WARNING: [Synth 8-689] width (11) of port connection 'floor_pos_x3' does not match port width (10) of module 'floor_gen' [C:/Users/LiuUtin/Desktop/Green_Cube/top.v:73]
+WARNING: [Synth 8-689] width (11) of port connection 'floor_pos_y3' does not match port width (10) of module 'floor_gen' [C:/Users/LiuUtin/Desktop/Green_Cube/top.v:74]
 INFO: [Synth 8-6157] synthesizing module 'slime_move' [C:/Users/LiuUtin/Desktop/Green_Cube/slime_move.v:1]
 	Parameter INIT bound to: 2'b00 
 	Parameter LEFT bound to: 2'b01 
 	Parameter RIGHT bound to: 2'b10 
 	Parameter JUMP_UP bound to: 1'b0 
 	Parameter FALL_DOWN bound to: 1'b1 
-INFO: [Synth 8-6155] done synthesizing module 'slime_move' (5#1) [C:/Users/LiuUtin/Desktop/Green_Cube/slime_move.v:1]
-WARNING: [Synth 8-689] width (11) of port connection 'floor_pos_x0' does not match port width (10) of module 'slime_move' [C:/Users/LiuUtin/Desktop/Green_Cube/top.v:85]
-WARNING: [Synth 8-689] width (11) of port connection 'floor_pos_y0' does not match port width (10) of module 'slime_move' [C:/Users/LiuUtin/Desktop/Green_Cube/top.v:86]
-WARNING: [Synth 8-689] width (11) of port connection 'floor_pos_x1' does not match port width (10) of module 'slime_move' [C:/Users/LiuUtin/Desktop/Green_Cube/top.v:87]
-WARNING: [Synth 8-689] width (11) of port connection 'floor_pos_y1' does not match port width (10) of module 'slime_move' [C:/Users/LiuUtin/Desktop/Green_Cube/top.v:88]
-WARNING: [Synth 8-689] width (11) of port connection 'floor_pos_x2' does not match port width (10) of module 'slime_move' [C:/Users/LiuUtin/Desktop/Green_Cube/top.v:89]
-WARNING: [Synth 8-689] width (11) of port connection 'floor_pos_y2' does not match port width (10) of module 'slime_move' [C:/Users/LiuUtin/Desktop/Green_Cube/top.v:90]
-WARNING: [Synth 8-689] width (11) of port connection 'floor_pos_x3' does not match port width (10) of module 'slime_move' [C:/Users/LiuUtin/Desktop/Green_Cube/top.v:91]
-WARNING: [Synth 8-689] width (11) of port connection 'floor_pos_y3' does not match port width (10) of module 'slime_move' [C:/Users/LiuUtin/Desktop/Green_Cube/top.v:92]
+INFO: [Synth 8-6155] done synthesizing module 'slime_move' (7#1) [C:/Users/LiuUtin/Desktop/Green_Cube/slime_move.v:1]
+WARNING: [Synth 8-689] width (11) of port connection 'floor_pos_x0' does not match port width (10) of module 'slime_move' [C:/Users/LiuUtin/Desktop/Green_Cube/top.v:87]
+WARNING: [Synth 8-689] width (11) of port connection 'floor_pos_y0' does not match port width (10) of module 'slime_move' [C:/Users/LiuUtin/Desktop/Green_Cube/top.v:88]
+WARNING: [Synth 8-689] width (11) of port connection 'floor_pos_x1' does not match port width (10) of module 'slime_move' [C:/Users/LiuUtin/Desktop/Green_Cube/top.v:89]
+WARNING: [Synth 8-689] width (11) of port connection 'floor_pos_y1' does not match port width (10) of module 'slime_move' [C:/Users/LiuUtin/Desktop/Green_Cube/top.v:90]
+WARNING: [Synth 8-689] width (11) of port connection 'floor_pos_x2' does not match port width (10) of module 'slime_move' [C:/Users/LiuUtin/Desktop/Green_Cube/top.v:91]
+WARNING: [Synth 8-689] width (11) of port connection 'floor_pos_y2' does not match port width (10) of module 'slime_move' [C:/Users/LiuUtin/Desktop/Green_Cube/top.v:92]
+WARNING: [Synth 8-689] width (11) of port connection 'floor_pos_x3' does not match port width (10) of module 'slime_move' [C:/Users/LiuUtin/Desktop/Green_Cube/top.v:93]
+WARNING: [Synth 8-689] width (11) of port connection 'floor_pos_y3' does not match port width (10) of module 'slime_move' [C:/Users/LiuUtin/Desktop/Green_Cube/top.v:94]
 INFO: [Synth 8-6157] synthesizing module 'KeyboardDecoder' [C:/Users/LiuUtin/Desktop/Green_Cube/KeyboardDecoder.v:1]
 	Parameter INIT bound to: 2'b00 
 	Parameter WAIT_FOR_SIGNAL bound to: 2'b01 
@@ -78,32 +79,30 @@ INFO: [Synth 8-6157] synthesizing module 'KeyboardDecoder' [C:/Users/LiuUtin/Des
 	Parameter IS_INIT bound to: 8'b10101010 
 	Parameter IS_EXTEND bound to: 8'b11100000 
 	Parameter IS_BREAK bound to: 8'b11110000 
-INFO: [Synth 8-6157] synthesizing module 'KeyboardCtrl_0' [C:/Users/LiuUtin/Desktop/Green_Cube/Green_Cube/Green_Cube.runs/synth_1/.Xil/Vivado-16940-MSI-Modern-14-B11M/realtime/KeyboardCtrl_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'KeyboardCtrl_0' (6#1) [C:/Users/LiuUtin/Desktop/Green_Cube/Green_Cube/Green_Cube.runs/synth_1/.Xil/Vivado-16940-MSI-Modern-14-B11M/realtime/KeyboardCtrl_0_stub.v:6]
-INFO: [Synth 8-6157] synthesizing module 'onepulse' [C:/Users/LiuUtin/Desktop/Green_Cube/onepulse.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'onepulse' (7#1) [C:/Users/LiuUtin/Desktop/Green_Cube/onepulse.v:1]
+INFO: [Synth 8-6157] synthesizing module 'KeyboardCtrl_0' [C:/Users/LiuUtin/Desktop/Green_Cube/Green_Cube/Green_Cube.runs/synth_1/.Xil/Vivado-15380-MSI-Modern-14-B11M/realtime/KeyboardCtrl_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'KeyboardCtrl_0' (8#1) [C:/Users/LiuUtin/Desktop/Green_Cube/Green_Cube/Green_Cube.runs/synth_1/.Xil/Vivado-15380-MSI-Modern-14-B11M/realtime/KeyboardCtrl_0_stub.v:6]
 INFO: [Synth 8-226] default block is never used [C:/Users/LiuUtin/Desktop/Green_Cube/KeyboardDecoder.v:69]
 INFO: [Synth 8-226] default block is never used [C:/Users/LiuUtin/Desktop/Green_Cube/KeyboardDecoder.v:79]
 INFO: [Synth 8-226] default block is never used [C:/Users/LiuUtin/Desktop/Green_Cube/KeyboardDecoder.v:89]
 INFO: [Synth 8-226] default block is never used [C:/Users/LiuUtin/Desktop/Green_Cube/KeyboardDecoder.v:99]
 INFO: [Synth 8-226] default block is never used [C:/Users/LiuUtin/Desktop/Green_Cube/KeyboardDecoder.v:109]
-INFO: [Synth 8-6155] done synthesizing module 'KeyboardDecoder' (8#1) [C:/Users/LiuUtin/Desktop/Green_Cube/KeyboardDecoder.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'KeyboardDecoder' (9#1) [C:/Users/LiuUtin/Desktop/Green_Cube/KeyboardDecoder.v:1]
 INFO: [Synth 8-6157] synthesizing module 'vga_controller' [C:/Users/LiuUtin/Desktop/Green_Cube/vga_controller.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'vga_controller' (9#1) [C:/Users/LiuUtin/Desktop/Green_Cube/vga_controller.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'Top' (10#1) [C:/Users/LiuUtin/Desktop/Green_Cube/top.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'vga_controller' (10#1) [C:/Users/LiuUtin/Desktop/Green_Cube/vga_controller.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'Top' (11#1) [C:/Users/LiuUtin/Desktop/Green_Cube/top.v:1]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1005.348 ; gain = 0.000
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1019.176 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1005.348 ; gain = 0.000
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1019.176 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1005.348 ; gain = 0.000
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1019.176 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.022 . Memory (MB): peak = 1005.348 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.025 . Memory (MB): peak = 1019.176 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -116,20 +115,20 @@ INFO: [Project 1-236] Implementation specific constraints were found while readi
 Resolution: To avoid this warning, move constraints listed in [.Xil/Top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1050.785 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1053.352 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1050.785 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1053.352 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1050.785 ; gain = 45.438
+Finished Constraint Validation : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 1053.352 ; gain = 34.176
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1050.785 ; gain = 45.438
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 1053.352 ; gain = 34.176
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -140,7 +139,7 @@ Applied set_property IO_BUFFER_TYPE = NONE for PS2_DATA. (constraint file  c:/Us
 Applied set_property CLOCK_BUFFER_TYPE = NONE for PS2_DATA. (constraint file  c:/Users/LiuUtin/Desktop/Green_Cube/Green_Cube/Green_Cube.gen/sources_1/ip/KeyboardCtrl_0/KeyboardCtrl_0/KeyboardCtrl_0_in_context.xdc, line 4).
 Applied set_property KEEP_HIERARCHY = SOFT for key_de/inst. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1050.785 ; gain = 45.438
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 1053.352 ; gain = 34.176
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'KeyboardDecoder'
 ---------------------------------------------------------------------------------------------------
@@ -153,7 +152,7 @@ INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'Keybo
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'KeyboardDecoder'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 1050.785 ; gain = 45.438
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 1053.352 ; gain = 34.176
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -173,7 +172,7 @@ Detailed RTL Component Info :
 	                9 Bit    Registers := 1     
 	                4 Bit    Registers := 2     
 	                2 Bit    Registers := 3     
-	                1 Bit    Registers := 10    
+	                1 Bit    Registers := 12    
 +---Muxes : 
 	   2 Input  512 Bit        Muxes := 1     
 	   3 Input   10 Bit        Muxes := 1     
@@ -186,7 +185,7 @@ Detailed RTL Component Info :
 	   3 Input    2 Bit        Muxes := 2     
 	   4 Input    2 Bit        Muxes := 1     
 	   2 Input    2 Bit        Muxes := 4     
-	   2 Input    1 Bit        Muxes := 37    
+	   2 Input    1 Bit        Muxes := 38    
 	   3 Input    1 Bit        Muxes := 4     
 	   4 Input    1 Bit        Muxes := 7     
 ---------------------------------------------------------------------------------
@@ -205,7 +204,7 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:17 . Memory (MB): peak = 1050.785 ; gain = 45.438
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:15 ; elapsed = 00:00:18 . Memory (MB): peak = 1053.352 ; gain = 34.176
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -226,19 +225,19 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 1050.785 ; gain = 45.438
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 1053.352 ; gain = 34.176
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 1050.785 ; gain = 45.438
+Finished Timing Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:22 . Memory (MB): peak = 1053.352 ; gain = 34.176
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 1077.168 ; gain = 71.820
+Finished Technology Mapping : Time (s): cpu = 00:00:19 ; elapsed = 00:00:23 . Memory (MB): peak = 1079.934 ; gain = 60.758
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -256,37 +255,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 1091.973 ; gain = 86.625
+Finished IO Insertion : Time (s): cpu = 00:00:21 ; elapsed = 00:00:25 . Memory (MB): peak = 1093.789 ; gain = 74.613
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 1091.973 ; gain = 86.625
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:21 ; elapsed = 00:00:25 . Memory (MB): peak = 1093.789 ; gain = 74.613
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 1091.973 ; gain = 86.625
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 1093.789 ; gain = 74.613
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 1091.973 ; gain = 86.625
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 1093.789 ; gain = 74.613
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 1091.973 ; gain = 86.625
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 1093.789 ; gain = 74.613
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 1091.973 ; gain = 86.625
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 1093.789 ; gain = 74.613
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -304,14 +303,14 @@ Report Cell Usage:
 |      |Cell         |Count |
 +------+-------------+------+
 |1     |KeyboardCtrl |     1|
-|2     |BUFG         |     2|
+|2     |BUFG         |     1|
 |3     |CARRY4       |    98|
 |4     |LUT1         |    17|
-|5     |LUT2         |   158|
-|6     |LUT3         |    60|
-|7     |LUT4         |   699|
-|8     |LUT5         |   191|
-|9     |LUT6         |   283|
+|5     |LUT2         |   152|
+|6     |LUT3         |    57|
+|7     |LUT4         |   700|
+|8     |LUT5         |   198|
+|9     |LUT6         |   290|
 |10    |MUXF7        |    71|
 |11    |MUXF8        |    34|
 |12    |FDCE         |   535|
@@ -321,25 +320,25 @@ Report Cell Usage:
 |16    |OBUF         |    14|
 +------+-------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 1091.973 ; gain = 86.625
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 1093.789 ; gain = 74.613
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:17 ; elapsed = 00:00:23 . Memory (MB): peak = 1091.973 ; gain = 41.188
-Synthesis Optimization Complete : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 1091.973 ; gain = 86.625
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:17 ; elapsed = 00:00:24 . Memory (MB): peak = 1093.789 ; gain = 40.438
+Synthesis Optimization Complete : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 1093.789 ; gain = 74.613
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.016 . Memory (MB): peak = 1104.023 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.016 . Memory (MB): peak = 1105.832 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 203 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1104.023 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1105.832 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
 47 Infos, 24 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:26 ; elapsed = 00:00:37 . Memory (MB): peak = 1104.023 ; gain = 98.676
+synth_design: Time (s): cpu = 00:00:25 ; elapsed = 00:00:31 . Memory (MB): peak = 1105.832 ; gain = 86.656
 INFO: [Common 17-1381] The checkpoint 'C:/Users/LiuUtin/Desktop/Green_Cube/Green_Cube/Green_Cube.runs/synth_1/Top.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file Top_utilization_synth.rpt -pb Top_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Wed Dec 20 23:39:50 2023...
+INFO: [Common 17-206] Exiting Vivado at Thu Dec 21 19:41:18 2023...
