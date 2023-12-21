@@ -12,7 +12,15 @@ module pixel_gen(
      input [9:0] floor_pos_y2,
      input [9:0] floor_pos_x3,
      input [9:0] floor_pos_y3,
-     input [3:0] enable,
+     input [9:0] floor_pos_x4,
+     input [9:0] floor_pos_y4,
+     input [9:0] floor_pos_x5,
+     input [9:0] floor_pos_y5,
+     input [9:0] floor_pos_x6,
+     input [9:0] floor_pos_y6,
+     input [9:0] floor_pos_x7,
+     input [9:0] floor_pos_y7,
+     input [7:0] enable,
      output reg [3:0] vgaRed,
      output reg [3:0] vgaGreen,
      output reg [3:0] vgaBlue
@@ -60,7 +68,19 @@ module pixel_gen(
 
                     else if ((h_cnt >= floor_pos_x3 && h_cnt < floor_pos_x3 + 10'd40) && (v_cnt >= floor_pos_y3 && v_cnt < floor_pos_y3 + 10'd5) && enable[3])
                          {vgaRed, vgaGreen, vgaBlue} = 12'hf00;
-                    
+
+                    else if ((h_cnt >= floor_pos_x4 && h_cnt < floor_pos_x4 + 10'd40) && (v_cnt >= floor_pos_y4 && v_cnt < floor_pos_y4 + 10'd5) && enable[4])
+                         {vgaRed, vgaGreen, vgaBlue} = 12'hf00;
+
+                    else if ((h_cnt >= floor_pos_x5 && h_cnt < floor_pos_x5 + 10'd40) && (v_cnt >= floor_pos_y5 && v_cnt < floor_pos_y5 + 10'd5) && enable[5])
+                         {vgaRed, vgaGreen, vgaBlue} = 12'hf00;
+
+                    else if ((h_cnt >= floor_pos_x6 && h_cnt < floor_pos_x6 + 10'd40) && (v_cnt >= floor_pos_y6 && v_cnt < floor_pos_y6 + 10'd5) && enable[6])
+                         {vgaRed, vgaGreen, vgaBlue} = 12'hf00;
+
+                    else if ((h_cnt >= floor_pos_x7 && h_cnt < floor_pos_x7 + 10'd40) && (v_cnt >= floor_pos_y7 && v_cnt < floor_pos_y7 + 10'd5) && enable[7])
+                         {vgaRed, vgaGreen, vgaBlue} = 12'hf00;
+
                     else {vgaRed, vgaGreen, vgaBlue} = 12'h000;
                end
           end

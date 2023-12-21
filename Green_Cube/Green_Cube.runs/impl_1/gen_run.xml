@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1703158841">
+<GenRun Id="impl_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1703167636">
   <File Type="BITSTR-BMM" Name="Top_bd.bmm"/>
   <File Type="OPT-METHODOLOGY-DRC" Name="Top_methodology_drc_opted.rpt"/>
   <File Type="INIT-TIMING" Name="Top_timing_summary_init.rpt"/>
@@ -85,6 +85,13 @@
       </FileInfo>
     </File>
     <File Path="$PPRDIR/../clk_div.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../clk_floor.v">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>

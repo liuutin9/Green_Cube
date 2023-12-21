@@ -1,12 +1,16 @@
-module Top(clk, rst, vgaRed, vgaBlue, vgaGreen, hsync, vsync, PS2_DATA, PS2_CLK);
+module Top(clk, rst, vgaRed, vgaBlue, vgaGreen, hsync, vsync, PS2_DATA, PS2_CLK, led);
 	input clk, rst;
     output [3:0] vgaRed, vgaGreen, vgaBlue;
     output hsync, vsync;
 	inout wire PS2_DATA;
     inout wire PS2_CLK;
+    output wire led;
+
+    assign led = 1'b1;
 	
 	wire clk_d2;//25MHz
 	wire clk_d18;
+    wire clk_floor;
     wire [16:0] pixel_addr;
     wire [11:0] pixel;
 	wire [11:0] data;
@@ -16,8 +20,10 @@ module Top(clk, rst, vgaRed, vgaBlue, vgaGreen, hsync, vsync, PS2_DATA, PS2_CLK)
 
 	wire [9:0] slime_pos_x, slime_pos_y;
 
-    wire [10:0] floor_pos_x0, floor_pos_y0, floor_pos_x1, floor_pos_y1, floor_pos_x2, floor_pos_y2, floor_pos_x3, floor_pos_y3;
-    wire [3:0] enable;
+    wire [9:0] floor_pos_x0, floor_pos_y0, floor_pos_x1, floor_pos_y1, floor_pos_x2, floor_pos_y2, floor_pos_x3, floor_pos_y3;
+    wire [9:0] floor_pos_x4, floor_pos_y4, floor_pos_x5, floor_pos_y5, floor_pos_x6, floor_pos_y6, floor_pos_x7, floor_pos_y7;
+
+    wire [7:0] enable;
 
     wire rst_db, rst_op;
 
@@ -36,6 +42,7 @@ module Top(clk, rst, vgaRed, vgaBlue, vgaGreen, hsync, vsync, PS2_DATA, PS2_CLK)
 	clk_div #(2) CD0(.clk(clk), .clk_d(clk_d2));
 	// clk_div #(19) CD1(.clk(clk), .clk_d(clk_18));
     clk_vga CV(.rst(rst), .clk(clk), .dclk(clk_18));
+    clk_floor CF(.rst(rst), .clk(clk), .dclk(clk_floor));
 
     debounce DB_RST(.s(rst), .s_db(rst_db), .clk(clk));
     onepulse OP_RST(.s(rst_db), .s_op(rst_op), .clk(clk));
@@ -54,6 +61,14 @@ module Top(clk, rst, vgaRed, vgaBlue, vgaGreen, hsync, vsync, PS2_DATA, PS2_CLK)
         .floor_pos_y2(floor_pos_y2),
         .floor_pos_x3(floor_pos_x3),
         .floor_pos_y3(floor_pos_y3),
+        .floor_pos_x4(floor_pos_x4),
+        .floor_pos_y4(floor_pos_y4),
+        .floor_pos_x5(floor_pos_x5),
+        .floor_pos_y5(floor_pos_y5),
+        .floor_pos_x6(floor_pos_x6),
+        .floor_pos_y6(floor_pos_y6),
+        .floor_pos_x7(floor_pos_x7),
+        .floor_pos_y7(floor_pos_y7),
         .enable(enable),
 		.vgaRed(vgaRed),
 		.vgaGreen(vgaGreen),
@@ -63,7 +78,9 @@ module Top(clk, rst, vgaRed, vgaBlue, vgaGreen, hsync, vsync, PS2_DATA, PS2_CLK)
     floor_gen FG(
         .rst(rst_db),
 		.clk(clk),
+        .clk_floor(clk_floor),
         .clk_vga(clk_18),
+
         .floor_pos_x0(floor_pos_x0),
         .floor_pos_y0(floor_pos_y0),
         .floor_pos_x1(floor_pos_x1),
@@ -72,6 +89,16 @@ module Top(clk, rst, vgaRed, vgaBlue, vgaGreen, hsync, vsync, PS2_DATA, PS2_CLK)
         .floor_pos_y2(floor_pos_y2),
         .floor_pos_x3(floor_pos_x3),
         .floor_pos_y3(floor_pos_y3),
+
+        .floor_pos_x4(floor_pos_x4),
+        .floor_pos_y4(floor_pos_y4),
+        .floor_pos_x5(floor_pos_x5),
+        .floor_pos_y5(floor_pos_y5),
+        .floor_pos_x6(floor_pos_x6),
+        .floor_pos_y6(floor_pos_y6),
+        .floor_pos_x7(floor_pos_x7),
+        .floor_pos_y7(floor_pos_y7),
+
         .enable(enable),
         .time_gap(time_gap),
         .hit_ceiling(hit_ceiling)
@@ -92,6 +119,14 @@ module Top(clk, rst, vgaRed, vgaBlue, vgaGreen, hsync, vsync, PS2_DATA, PS2_CLK)
         .floor_pos_y2(floor_pos_y2),
         .floor_pos_x3(floor_pos_x3),
         .floor_pos_y3(floor_pos_y3),
+        .floor_pos_x4(floor_pos_x4),
+        .floor_pos_y4(floor_pos_y4),
+        .floor_pos_x5(floor_pos_x5),
+        .floor_pos_y5(floor_pos_y5),
+        .floor_pos_x6(floor_pos_x6),
+        .floor_pos_y6(floor_pos_y6),
+        .floor_pos_x7(floor_pos_x7),
+        .floor_pos_y7(floor_pos_y7),
         .enable(enable),
         .time_gap(time_gap),
         .hit_ceiling(hit_ceiling)

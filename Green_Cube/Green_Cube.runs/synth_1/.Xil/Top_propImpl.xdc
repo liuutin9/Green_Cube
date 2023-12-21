@@ -35,3 +35,5 @@ set_property src_info {type:XDC file:1 line:38 export:INPUT save:INPUT read:READ
 set_property PACKAGE_PIN C17 [get_ports PS2_CLK]
 set_property src_info {type:XDC file:1 line:39 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN B17 [get_ports PS2_DATA]
+set_property src_info {type:XDC file:1 line:42 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN U16 [get_ports led]

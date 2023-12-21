@@ -1,9 +1,15 @@
-module slime_move(rst, clk, clk_vga, x, y, key, floor_pos_x0, floor_pos_y0, floor_pos_x1, floor_pos_y1, 
-floor_pos_x2, floor_pos_y2, floor_pos_x3, floor_pos_y3, enable, time_gap, hit_ceiling);
+module slime_move(rst, clk, clk_vga, x, y, key, 
+floor_pos_x0, floor_pos_y0, floor_pos_x1, floor_pos_y1, 
+floor_pos_x2, floor_pos_y2, floor_pos_x3, floor_pos_y3, 
+floor_pos_x4, floor_pos_y4, floor_pos_x5, floor_pos_y5, 
+floor_pos_x6, floor_pos_y6, floor_pos_x7, floor_pos_y7, 
+enable, time_gap, hit_ceiling);
+
     input rst, clk, clk_vga;
     input [1:0] key;
     input [9:0] floor_pos_x0, floor_pos_y0, floor_pos_x1, floor_pos_y1, floor_pos_x2, floor_pos_y2, floor_pos_x3, floor_pos_y3;
-    input [3:0] enable;
+    input [9:0] floor_pos_x4, floor_pos_y4, floor_pos_x5, floor_pos_y5, floor_pos_x6, floor_pos_y6, floor_pos_x7, floor_pos_y7;
+    input [7:0] enable;
     output reg [9:0] x, y;
     output [8:0] time_gap;
     output hit_ceiling;
@@ -153,6 +159,31 @@ floor_pos_x2, floor_pos_y2, floor_pos_x3, floor_pos_y3, enable, time_gap, hit_ce
                         next_state = JUMP_UP;
                         next_hit_ceiling = y < 10'd240;
                     end
+                    else if (enable[4] && (y == floor_pos_y4 - 1) && ((x >= floor_pos_x4 && x <= floor_pos_x4 + 10'd40) || (x + 10'd20 >= floor_pos_x4 && x + 10'd20 <= floor_pos_x4 + 10'd40))) begin
+                        next_y = y;
+                        next_time_gap = 9'd1;
+                        next_state = JUMP_UP;
+                        next_hit_ceiling = y < 10'd240;
+                    end
+                    else if (enable[5] && (y == floor_pos_y5 - 1) && ((x >= floor_pos_x5 && x <= floor_pos_x5 + 10'd40) || (x + 10'd20 >= floor_pos_x5 && x + 10'd20 <= floor_pos_x5 + 10'd40))) begin
+                        next_y = y;
+                        next_time_gap = 9'd1;
+                        next_state = JUMP_UP;
+                        next_hit_ceiling = y < 10'd240;
+                    end
+                    else if (enable[6] && (y == floor_pos_y6 - 1) && ((x >= floor_pos_x6 && x <= floor_pos_x6 + 10'd40) || (x + 10'd20 >= floor_pos_x6 && x + 10'd20 <= floor_pos_x6 + 10'd40))) begin
+                        next_y = y;
+                        next_time_gap = 9'd1;
+                        next_state = JUMP_UP;
+                        next_hit_ceiling = y < 10'd240;
+                    end
+                    else if (enable[7] && (y == floor_pos_y7 - 1) && ((x >= floor_pos_x7 && x <= floor_pos_x7 + 10'd40) || (x + 10'd20 >= floor_pos_x7 && x + 10'd20 <= floor_pos_x7 + 10'd40))) begin
+                        next_y = y;
+                        next_time_gap = 9'd1;
+                        next_state = JUMP_UP;
+                        next_hit_ceiling = y < 10'd240;
+                    end
+
                     else if (time_gap > 9'd320) begin
                         next_y = y + 10'd1;
                         next_time_gap = time_gap;
