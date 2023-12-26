@@ -30,7 +30,7 @@ enable, time_gap, hit_ceiling);
 
     always @ (posedge clk) begin
         if (rst) random_x_counter <= 5'd0; 
-        else if(clk_floor) random_x_counter <= random_x_counter > 5'd30 ? 5'd0 : random_x_counter + 1;
+        else if(clk) random_x_counter <= random_x_counter > 5'd29 ? 5'd0 : random_x_counter + 1;
         else random_x_counter <= random_x_counter;
     end
 
@@ -44,36 +44,36 @@ enable, time_gap, hit_ceiling);
             floor_pos_x2 <= 10'd450;
             floor_pos_x3 <= 10'd600;
             floor_pos_x4 <= 10'd150;
-            floor_pos_x5 <= 10'd300;
+            floor_pos_x5 <= 10'd600;
             floor_pos_x6 <= 10'd450;
-            floor_pos_x7 <= 10'd600;
+            floor_pos_x7 <= 10'd300;
 
             tmp_floor_pos_x0 <= 10'd150;
             tmp_floor_pos_x1 <= 10'd300;
             tmp_floor_pos_x2 <= 10'd450;
             tmp_floor_pos_x3 <= 10'd600;
             tmp_floor_pos_x4 <= 10'd150;
-            tmp_floor_pos_x5 <= 10'd300;
+            tmp_floor_pos_x5 <= 10'd600;
             tmp_floor_pos_x6 <= 10'd450;
-            tmp_floor_pos_x7 <= 10'd600;
+            tmp_floor_pos_x7 <= 10'd300;
 
-            floor_pos_y0 <= 10'd330;
-            floor_pos_y1 <= 10'd460;
-            floor_pos_y2 <= 10'd220;
-            floor_pos_y3 <= 10'd160;
-            floor_pos_y4 <= 10'd120;
-            floor_pos_y5 <= 10'd100;
-            floor_pos_y6 <= 10'd60;
-            floor_pos_y7 <= 10'd30;
+            floor_pos_y0 <= 10'd0;
+            floor_pos_y1 <= 10'd60;
+            floor_pos_y2 <= 10'd120;
+            floor_pos_y3 <= 10'd180;
+            floor_pos_y4 <= 10'd240;
+            floor_pos_y5 <= 10'd300;
+            floor_pos_y6 <= 10'd360;
+            floor_pos_y7 <= 10'd420;
 
-            tmp_floor_pos_y0 <= 10'd330;
-            tmp_floor_pos_y1 <= 10'd460;
-            tmp_floor_pos_y2 <= 10'd220;
-            tmp_floor_pos_y3 <= 10'd160;
-            tmp_floor_pos_y4 <= 10'd120;
-            tmp_floor_pos_y5 <= 10'd100;
-            tmp_floor_pos_y6 <= 10'd60;
-            tmp_floor_pos_y7 <= 10'd30;
+            tmp_floor_pos_y0 <= 10'd0;
+            tmp_floor_pos_y1 <= 10'd60;
+            tmp_floor_pos_y2 <= 10'd120;
+            tmp_floor_pos_y3 <= 10'd180;
+            tmp_floor_pos_y4 <= 10'd240;
+            tmp_floor_pos_y5 <= 10'd300;
+            tmp_floor_pos_y6 <= 10'd360;
+            tmp_floor_pos_y7 <= 10'd420;
 
         end
         else if (clk_floor) begin

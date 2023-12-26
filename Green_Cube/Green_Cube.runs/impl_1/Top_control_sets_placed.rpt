@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-| Date         : Mon Dec 25 22:19:44 2023
+| Date         : Mon Dec 25 23:04:40 2023
 | Host         : MSI-Modern-14-B11M running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file Top_control_sets_placed.rpt
 | Design       : Top
@@ -59,11 +59,11 @@ Table of Contents
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | No           | No                    | No                     |              15 |            7 |
-| No           | No                    | Yes                    |              64 |           26 |
-| No           | Yes                   | No                     |              47 |           14 |
+| No           | No                    | Yes                    |              64 |           22 |
+| No           | Yes                   | No                     |              52 |           18 |
 | Yes          | No                    | No                     |               0 |            0 |
-| Yes          | No                    | Yes                    |             562 |          162 |
-| Yes          | Yes                   | No                     |             331 |          148 |
+| Yes          | No                    | Yes                    |             562 |          161 |
+| Yes          | Yes                   | No                     |             342 |          158 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
@@ -76,22 +76,22 @@ Table of Contents
 |  clk_IBUF_BUFG | key_de/inst/inst/lock_status0                     | DB_RST/rst_db            |                1 |              2 |         2.00 |
 |  CD0/Q[0]      |                                                   | DB_RST/rst_db            |                2 |              2 |         1.00 |
 |  clk_IBUF_BUFG | key_de/inst/inst/Ps2Interface_i/bits_count        | DB_RST/rst_db            |                2 |              4 |         2.00 |
-|  clk_IBUF_BUFG | CF/E[0]                                           | FG/RSTB                  |                1 |              5 |         5.00 |
+|  clk_IBUF_BUFG |                                                   | FG/RSTB                  |                3 |              5 |         1.67 |
+|  clk_IBUF_BUFG | FG/DFF_reg[3]                                     | SM/time_gap[8]_i_1_n_0   |                4 |              8 |         2.00 |
+|  clk_IBUF_BUFG | key_de/inst/inst/Ps2Interface_i/rx_valid          | DB_RST/rst_db            |                2 |              8 |         4.00 |
 |  clk_IBUF_BUFG | key_de/inst/inst/Ps2Interface_i/rx_finish         | DB_RST/rst_db            |                2 |              8 |         4.00 |
-|  clk_IBUF_BUFG | key_de/inst/inst/Ps2Interface_i/rx_valid          | DB_RST/rst_db            |                3 |              8 |         2.67 |
-|  clk_IBUF_BUFG | FG/DFF_reg[3]                                     | SM/time_gap[8]_i_1_n_0   |                3 |              8 |         2.67 |
-|  clk_IBUF_BUFG | SM/x[9]_i_1_n_0                                   | DB_RST/rst_db            |                6 |             10 |         1.67 |
+|  clk_IBUF_BUFG | SM/x[9]_i_1_n_0                                   | DB_RST/rst_db            |                5 |             10 |         2.00 |
 |  clk_IBUF_BUFG | SM/y[9]_i_1_n_0                                   | DB_RST/rst_db            |                5 |             10 |         2.00 |
-|  CD0/Q[0]      |                                                   | VC0/pixel_cnt[9]_i_1_n_0 |                3 |             10 |         3.33 |
+|  CD0/Q[0]      |                                                   | VC0/pixel_cnt[9]_i_1_n_0 |                4 |             10 |         2.50 |
 |  CD0/Q[0]      | VC0/line_cnt                                      | VC0/line_cnt[9]_i_1_n_0  |                4 |             10 |         2.50 |
 |  clk_IBUF_BUFG | key_de/inst/inst/Ps2Interface_i/frame[10]_i_1_n_0 | DB_RST/rst_db            |                2 |             11 |         5.50 |
 |  clk_IBUF_BUFG |                                                   |                          |                7 |             15 |         2.14 |
-|  clk_IBUF_BUFG | key_de/next_key                                   | DB_RST/rst_db            |                8 |             17 |         2.12 |
+|  clk_IBUF_BUFG | key_de/next_key                                   | DB_RST/rst_db            |                7 |             17 |         2.43 |
 |  clk_IBUF_BUFG |                                                   | rst_IBUF                 |                9 |             35 |         3.89 |
-|  clk_IBUF_BUFG |                                                   | DB_RST/rst_db            |               26 |             64 |         2.46 |
-|  clk_IBUF_BUFG | CF/E[0]                                           | DB_RST/rst_db            |               58 |            144 |         2.48 |
-|  clk_IBUF_BUFG | CV/E[0]                                           | DB_RST/rst_db            |               71 |            144 |         2.03 |
-|  clk_IBUF_BUFG | key_de/op/E[0]                                    | DB_RST/rst_db            |              144 |            512 |         3.56 |
+|  clk_IBUF_BUFG |                                                   | DB_RST/rst_db            |               22 |             64 |         2.91 |
+|  clk_IBUF_BUFG | CF/E[0]                                           | DB_RST/rst_db            |               82 |            152 |         1.85 |
+|  clk_IBUF_BUFG | CF/counter_reg[1]_0[0]                            | DB_RST/rst_db            |               58 |            152 |         2.62 |
+|  clk_IBUF_BUFG | key_de/op/E[0]                                    | DB_RST/rst_db            |              145 |            512 |         3.53 |
 +----------------+---------------------------------------------------+--------------------------+------------------+----------------+--------------+
 
 
