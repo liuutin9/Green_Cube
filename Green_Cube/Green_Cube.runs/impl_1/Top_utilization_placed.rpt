@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-| Date         : Mon Dec 25 23:04:40 2023
+| Date         : Tue Dec 26 23:25:47 2023
 | Host         : MSI-Modern-14-B11M running 64-bit major release  (build 9200)
 | Command      : report_utilization -file Top_utilization_placed.rpt -pb Top_utilization_placed.pb
 | Design       : Top
@@ -31,14 +31,14 @@ Table of Contents
 +-------------------------+------+-------+-----------+-------+
 |        Site Type        | Used | Fixed | Available | Util% |
 +-------------------------+------+-------+-----------+-------+
-| Slice LUTs              | 1616 |     0 |     20800 |  7.77 |
-|   LUT as Logic          | 1616 |     0 |     20800 |  7.77 |
+| Slice LUTs              | 1737 |     0 |     20800 |  8.35 |
+|   LUT as Logic          | 1737 |     0 |     20800 |  8.35 |
 |   LUT as Memory         |    0 |     0 |      9600 |  0.00 |
-| Slice Registers         | 1035 |     0 |     41600 |  2.49 |
-|   Register as Flip Flop | 1035 |     0 |     41600 |  2.49 |
+| Slice Registers         | 1063 |     0 |     41600 |  2.56 |
+|   Register as Flip Flop | 1063 |     0 |     41600 |  2.56 |
 |   Register as Latch     |    0 |     0 |     41600 |  0.00 |
-| F7 Muxes                |   70 |     0 |     16300 |  0.43 |
-| F8 Muxes                |   34 |     0 |      8150 |  0.42 |
+| F7 Muxes                |   83 |     0 |     16300 |  0.51 |
+| F8 Muxes                |   35 |     0 |      8150 |  0.43 |
 +-------------------------+------+-------+-----------+-------+
 
 
@@ -57,7 +57,7 @@ Table of Contents
 | 9     |          Yes |           - |          Set |
 | 617   |          Yes |           - |        Reset |
 | 134   |          Yes |         Set |            - |
-| 275   |          Yes |       Reset |            - |
+| 303   |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -67,21 +67,21 @@ Table of Contents
 +--------------------------------------------+------+-------+-----------+-------+
 |                  Site Type                 | Used | Fixed | Available | Util% |
 +--------------------------------------------+------+-------+-----------+-------+
-| Slice                                      |  547 |     0 |      8150 |  6.71 |
-|   SLICEL                                   |  355 |     0 |           |       |
-|   SLICEM                                   |  192 |     0 |           |       |
-| LUT as Logic                               | 1616 |     0 |     20800 |  7.77 |
+| Slice                                      |  593 |     0 |      8150 |  7.28 |
+|   SLICEL                                   |  362 |     0 |           |       |
+|   SLICEM                                   |  231 |     0 |           |       |
+| LUT as Logic                               | 1737 |     0 |     20800 |  8.35 |
 |   using O5 output only                     |    0 |       |           |       |
-|   using O6 output only                     | 1238 |       |           |       |
-|   using O5 and O6                          |  378 |       |           |       |
+|   using O6 output only                     | 1348 |       |           |       |
+|   using O5 and O6                          |  389 |       |           |       |
 | LUT as Memory                              |    0 |     0 |      9600 |  0.00 |
 |   LUT as Distributed RAM                   |    0 |     0 |           |       |
 |   LUT as Shift Register                    |    0 |     0 |           |       |
-| Slice Registers                            | 1035 |     0 |     41600 |  2.49 |
-|   Register driven from within the Slice    |  750 |       |           |       |
-|   Register driven from outside the Slice   |  285 |       |           |       |
-|     LUT in front of the register is unused |  104 |       |           |       |
-|     LUT in front of the register is used   |  181 |       |           |       |
+| Slice Registers                            | 1063 |     0 |     41600 |  2.56 |
+|   Register driven from within the Slice    |  765 |       |           |       |
+|   Register driven from outside the Slice   |  298 |       |           |       |
+|     LUT in front of the register is unused |  130 |       |           |       |
+|     LUT in front of the register is used   |  168 |       |           |       |
 | Unique Control Sets                        |   19 |       |      8150 |  0.23 |
 +--------------------------------------------+------+-------+-----------+-------+
 * * Note: Available Control Sets calculated as Slice * 1, Review the Control Sets Report for more information regarding control sets.
@@ -177,20 +177,20 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| LUT4     |  990 |                 LUT |
+| LUT4     | 1013 |                 LUT |
 | FDCE     |  617 |        Flop & Latch |
-| LUT6     |  426 |                 LUT |
-| LUT5     |  365 |                 LUT |
-| FDRE     |  275 |        Flop & Latch |
-| CARRY4   |  190 |          CarryLogic |
+| LUT6     |  502 |                 LUT |
+| LUT5     |  394 |                 LUT |
+| FDRE     |  303 |        Flop & Latch |
+| CARRY4   |  197 |          CarryLogic |
 | FDSE     |  134 |        Flop & Latch |
-| LUT3     |  123 |                 LUT |
-| LUT2     |   84 |                 LUT |
-| MUXF7    |   70 |               MuxFx |
-| MUXF8    |   34 |               MuxFx |
+| LUT3     |  125 |                 LUT |
+| LUT2     |   85 |                 LUT |
+| MUXF7    |   83 |               MuxFx |
+| MUXF8    |   35 |               MuxFx |
 | OBUF     |   15 |                  IO |
 | FDPE     |    9 |        Flop & Latch |
-| LUT1     |    6 |                 LUT |
+| LUT1     |    7 |                 LUT |
 | IBUF     |    4 |                  IO |
 | OBUFT    |    2 |                  IO |
 | BUFG     |    1 |               Clock |

@@ -3,7 +3,7 @@ floor_pos_x0, floor_pos_y0, floor_pos_x1, floor_pos_y1,
 floor_pos_x2, floor_pos_y2, floor_pos_x3, floor_pos_y3, 
 floor_pos_x4, floor_pos_y4, floor_pos_x5, floor_pos_y5, 
 floor_pos_x6, floor_pos_y6, floor_pos_x7, floor_pos_y7, 
-enable, time_gap, hit_ceiling);
+enable, time_gap, hit_ceiling, slime_die);
 
     input rst, clk, clk_vga;
     input [1:0] key;
@@ -13,6 +13,7 @@ enable, time_gap, hit_ceiling);
     output reg [9:0] x, y;
     output [8:0] time_gap;
     output hit_ceiling;
+    output reg slime_die;
 
     reg [8:0] time_gap, next_time_gap;
     reg [9:0] next_y;
@@ -227,5 +228,20 @@ enable, time_gap, hit_ceiling);
         endcase
     end
 
+    always @ (*)begin
+        case(state)
+            JUMP_UP: begin
+                slime_die = 1'b0;
+            end
+            default: begin
+                if (y == 10'd479) begin
+                    slime_die = 1'b1;
+                end
+                else begin
+                    slime_die = 1'b0;
+                end
+            end
+        endcase
+    end
 
 endmodule

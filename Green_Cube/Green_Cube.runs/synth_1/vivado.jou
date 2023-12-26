@@ -2,8 +2,8 @@
 # Vivado v2020.2 (64-bit)
 # SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
 # IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
-# Start of session at: Mon Dec 25 23:03:37 2023
-# Process ID: 11476
+# Start of session at: Tue Dec 26 23:24:43 2023
+# Process ID: 8560
 # Current directory: C:/Users/LiuUtin/Desktop/Green_Cube/Green_Cube/Green_Cube.runs/synth_1
 # Command line: vivado.exe -log Top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source Top.tcl
 # Log file: C:/Users/LiuUtin/Desktop/Green_Cube/Green_Cube/Green_Cube.runs/synth_1/Top.vds
