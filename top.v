@@ -26,6 +26,8 @@ module Top(clk, rst, vgaRed, vgaBlue, vgaGreen, hsync, vsync, PS2_DATA, PS2_CLK,
 
     wire [7:0] enable;
 
+    wire [3:0] score_0, score_1;
+
     wire rst_db, rst_op;
 
 	// keyboard
@@ -95,6 +97,8 @@ module Top(clk, rst, vgaRed, vgaBlue, vgaGreen, hsync, vsync, PS2_DATA, PS2_CLK,
         .floor_pos_x7(floor_pos_x7),
         .floor_pos_y7(floor_pos_y7),
         .enable(enable),
+        .score_0(score_0),
+        .score_1(score_1),
 		.vgaRed(vgaRed_game),
 		.vgaGreen(vgaGreen_game),
 		.vgaBlue(vgaBlue_game)
@@ -160,7 +164,9 @@ module Top(clk, rst, vgaRed, vgaBlue, vgaGreen, hsync, vsync, PS2_DATA, PS2_CLK,
         .enable(enable),
         .time_gap(time_gap),
         .hit_ceiling(hit_ceiling),
-        .slime_die(slime_die)
+        .slime_die(slime_die),
+        .score_0(score_0),
+        .score_1(score_1)
 	);
 
 	KeyboardDecoder key_de (
