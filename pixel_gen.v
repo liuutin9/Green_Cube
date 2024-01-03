@@ -271,9 +271,10 @@ module pixel_gen(
      assign num_9[1] =  10'b0000000000;
      assign num_9[0] =  10'b0000000000;
 
-     parameter SLIME_COLOR = 12'h0c0;
-     parameter BLOCK_COLOR = 12'hc00;
+     parameter SLIME_COLOR = 12'h4f4;
+     parameter BLOCK_COLOR = 12'hf32;
      parameter BLACK = 12'h000;
+     parameter BACKGROUND = 12'h8cf;
    
      always @(*) begin
           if (!valid) {vgaRed, vgaGreen, vgaBlue} = 12'h000;
@@ -339,7 +340,7 @@ module pixel_gen(
                     else if ((h_cnt >= floor_pos_x7 && h_cnt < floor_pos_x7 + 10'd40) && (v_cnt >= floor_pos_y7 && v_cnt < floor_pos_y7 + 10'd5) && enable[7])
                          {vgaRed, vgaGreen, vgaBlue} = BLOCK_COLOR;
 
-                    else {vgaRed, vgaGreen, vgaBlue} = BLACK;
+                    else {vgaRed, vgaGreen, vgaBlue} = BACKGROUND;
                end
           end
      end

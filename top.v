@@ -27,6 +27,8 @@ module Top(clk, rst, vgaRed, vgaBlue, vgaGreen, hsync, vsync, PS2_DATA, PS2_CLK,
     wire [7:0] enable;
 
     wire [3:0] score_0, score_1;
+    wire [3:0] last_score_0, last_score_1;
+    wire [3:0] highest_score_0, highest_score_1;
 
     wire rst_db, rst_op;
 
@@ -64,6 +66,18 @@ module Top(clk, rst, vgaRed, vgaBlue, vgaGreen, hsync, vsync, PS2_DATA, PS2_CLK,
     debounce DB_RST(.s(rst), .s_db(rst_db), .clk(clk));
     onepulse OP_RST(.s(rst_db), .s_op(rst_op), .clk(clk));
 
+    record R(
+        .score_0(score_0),
+        .score_1(score_1),
+        .rst(rst),
+        .slime_die(slime_die),
+        .clk(clk),
+        .last_score_0(last_score_0),
+        .last_score_1(last_score_1),
+        .highest_score_0(highest_score_0),
+        .highest_score_1(highest_score_1)
+    );
+
     cover C(
         .h_cnt(h_cnt),
 		.v_cnt(v_cnt),
@@ -71,7 +85,11 @@ module Top(clk, rst, vgaRed, vgaBlue, vgaGreen, hsync, vsync, PS2_DATA, PS2_CLK,
         .clk_bling(clk_bling),
         .vgaRed(vgaRed_cover),
 		.vgaGreen(vgaGreen_cover),
-		.vgaBlue(vgaBlue_cover)
+		.vgaBlue(vgaBlue_cover),
+        .last_score_0(last_score_0),
+        .last_score_1(last_score_1),
+        .highest_score_0(highest_score_0),
+        .highest_score_1(highest_score_1)
     );
 
 	pixel_gen PG(

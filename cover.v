@@ -5,7 +5,11 @@ module cover(
     input clk_bling,
     output reg [3:0] vgaRed,
     output reg [3:0] vgaGreen,
-    output reg [3:0] vgaBlue
+    output reg [3:0] vgaBlue,
+    input [3:0] last_score_0,
+    input [3:0] last_score_1,
+    input [3:0] highest_score_0,
+    input [3:0] highest_score_1
     );
 
     wire [12:0] P [14:0];
