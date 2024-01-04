@@ -272,19 +272,24 @@ enable, time_gap, hit_ceiling, slime_die, score_0, score_1);
     end
 
     always @ (*)begin
-        case(state)
-            JUMP_UP: begin
-                slime_die = 1'b0;
-            end
-            default: begin
-                if (y == 10'd479) begin
-                    slime_die = 1'b1;
-                end
-                else begin
+        if(score_1 == 4'd10) begin
+            slime_die = 1'b1;
+        end
+        else begin
+            case(state)
+                JUMP_UP: begin
                     slime_die = 1'b0;
                 end
-            end
-        endcase
+                default: begin
+                    if (y == 10'd479) begin
+                        slime_die = 1'b1;
+                    end
+                    else begin
+                        slime_die = 1'b0;
+                    end
+                end
+            endcase
+        end
     end
 
 endmodule

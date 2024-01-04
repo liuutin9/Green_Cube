@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-| Date             : Wed Jan  3 23:47:35 2024
+| Date             : Thu Jan  4 12:26:56 2024
 | Host             : Utin-Desktop running 64-bit major release  (build 9200)
 | Command          : report_power -file Top_power_routed.rpt -pb Top_power_summary_routed.pb -rpx Top_power_routed.rpx
 | Design           : Top
@@ -30,14 +30,14 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 3.816        |
+| Total On-Chip Power (W)  | 7.780        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 3.732        |
-| Device Static (W)        | 0.084        |
+| Dynamic (W)              | 7.668        |
+| Device Static (W)        | 0.112        |
 | Effective TJA (C/W)      | 5.0          |
-| Max Ambient (C)          | 65.9         |
-| Junction Temperature (C) | 44.1         |
+| Max Ambient (C)          | 46.1         |
+| Junction Temperature (C) | 63.9         |
 | Confidence Level         | Low          |
 | Setting File             | ---          |
 | Simulation Activity File | ---          |
@@ -52,17 +52,17 @@ Table of Contents
 +----------------+-----------+----------+-----------+-----------------+
 | On-Chip        | Power (W) | Used     | Available | Utilization (%) |
 +----------------+-----------+----------+-----------+-----------------+
-| Slice Logic    |     1.821 |     3621 |       --- |             --- |
-|   LUT as Logic |     1.695 |     1800 |     20800 |            8.65 |
-|   CARRY4       |     0.062 |      200 |      8150 |            2.45 |
-|   Register     |     0.048 |     1071 |     41600 |            2.57 |
-|   F7/F8 Muxes  |     0.010 |      120 |     32600 |            0.37 |
+| Slice Logic    |     3.638 |     3987 |       --- |             --- |
+|   LUT as Logic |     3.471 |     2116 |     20800 |           10.17 |
+|   CARRY4       |     0.079 |      200 |      8150 |            2.45 |
+|   Register     |     0.061 |     1073 |     41600 |            2.58 |
+|   F7/F8 Muxes  |     0.022 |      122 |     32600 |            0.37 |
 |   BUFG         |     0.006 |        1 |        32 |            3.13 |
 |   Others       |     0.000 |       24 |       --- |             --- |
-| Signals        |     1.524 |     1896 |       --- |             --- |
-| I/O            |     0.388 |       19 |       106 |           17.92 |
-| Static Power   |     0.084 |          |           |                 |
-| Total          |     3.816 |          |           |                 |
+| Signals        |     3.136 |     2268 |       --- |             --- |
+| I/O            |     0.894 |       19 |       106 |           17.92 |
+| Static Power   |     0.112 |          |           |                 |
+| Total          |     7.780 |          |           |                 |
 +----------------+-----------+----------+-----------+-----------------+
 
 
@@ -72,16 +72,16 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint    |       1.000 |     3.369 |       3.349 |      0.020 |       NA    | Unspecified | NA         |
-| Vccaux    |       1.800 |     0.028 |       0.014 |      0.014 |       NA    | Unspecified | NA         |
-| Vcco33    |       3.300 |     0.109 |       0.108 |      0.001 |       NA    | Unspecified | NA         |
+| Vccint    |       1.000 |     6.821 |       6.778 |      0.043 |       NA    | Unspecified | NA         |
+| Vccaux    |       1.800 |     0.049 |       0.033 |      0.016 |       NA    | Unspecified | NA         |
+| Vcco33    |       3.300 |     0.253 |       0.252 |      0.001 |       NA    | Unspecified | NA         |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco135   |       1.350 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vcco12    |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vccaux_io |       1.800 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
-| Vccbram   |       1.000 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
+| Vccbram   |       1.000 |     0.001 |       0.000 |      0.001 |       NA    | Unspecified | NA         |
 | MGTAVcc   |       1.000 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | MGTAVtt   |       1.200 |     0.000 |       0.000 |      0.000 |       NA    | Unspecified | NA         |
 | Vccadc    |       1.800 |     0.020 |       0.000 |      0.020 |       NA    | Unspecified | NA         |
@@ -139,17 +139,18 @@ Table of Contents
 +------------+-----------+
 | Name       | Power (W) |
 +------------+-----------+
-| Top        |     3.732 |
-|   CD0      |     0.080 |
-|   CD1      |     0.061 |
-|   CF       |     0.081 |
-|   CV       |     0.073 |
-|   FG       |     0.257 |
-|   SM       |     0.437 |
-|   VC0      |     1.921 |
-|   key_de   |     0.447 |
-|     inst   |     0.445 |
-|       inst |     0.445 |
+| Top        |     7.668 |
+|   CD0      |     0.062 |
+|   CD1      |     0.081 |
+|   CF       |     0.075 |
+|   CV       |     0.087 |
+|   FG       |     0.527 |
+|   R        |     0.048 |
+|   SM       |     0.605 |
+|   VC0      |     4.855 |
+|   key_de   |     0.445 |
+|     inst   |     0.444 |
+|       inst |     0.444 |
 +------------+-----------+
 
 

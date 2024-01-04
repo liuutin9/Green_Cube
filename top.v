@@ -239,28 +239,34 @@ module Top(clk, rst, vgaRed, vgaBlue, vgaGreen, hsync, vsync, PS2_DATA, PS2_CLK,
 
 	always @ (posedge clk) begin
         if (been_ready && key_down[last_change]) begin
-            case (last_change)
-                KEY_A: begin
-                    key_state <= 2'b10;
-                    Enter_press <= 1'b0;
-                end
-                KEY_D: begin
-                    key_state <= 2'b01;
-                    Enter_press <= 1'b0;
-                end
-                KEY_CODES_ENTER: begin
-                    key_state <= 2'b00;
-                    Enter_press <= 1'b1;
-                end
-                KEY_CODES_RIGHT_ENTER: begin
-                    key_state <= 2'b00;
-                    Enter_press <= 1'b1;
-                end
-                default: begin
-                    key_state <= 2'b00;
-                    Enter_press <= 1'b0;
-                end
-            endcase
+            if(game_state == COVER) begin
+                case (last_change)
+                    KEY_CODES_ENTER: begin
+                        Enter_press <= 1'b1;
+                    end
+                    KEY_CODES_RIGHT_ENTER: begin
+                        Enter_press <= 1'b1;
+                    end
+                    default: begin
+                        Enter_press <= 1'b0;
+                    end
+                endcase
+                key_state <= 2'b00;
+            end
+            else begin
+                case (last_change)
+                    KEY_A: begin
+                        key_state <= 2'b10;
+                    end
+                    KEY_D: begin
+                        key_state <= 2'b01;
+                    end
+                    default: begin
+                        key_state <= 2'b00;
+                    end
+                endcase
+                Enter_press <= 1'b0;
+            end
         end
         else begin
             key_state <= 2'b00;
