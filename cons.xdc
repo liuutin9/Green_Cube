@@ -40,3 +40,11 @@ set_property PACKAGE_PIN B17 [get_ports PS2_DATA]
 
 set_property IOSTANDARD LVCMOS33 [get_ports led]
 set_property PACKAGE_PIN U16 [get_ports led]
+
+set_property PACKAGE_PIN A14 [get_ports pmod_1]
+set_property IOSTANDARD LVCMOS33 [get_ports pmod_1]
+set_property IOSTANDARD LVCMOS33 [get_ports pmod_2]
+set_property IOSTANDARD LVCMOS33 [get_ports pmod_4]
+set_property PACKAGE_PIN A16 [get_ports pmod_2]
+set_property PACKAGE_PIN B16 [get_ports pmod_4]
+

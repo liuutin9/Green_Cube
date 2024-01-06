@@ -25,7 +25,8 @@ module pixel_gen(
      input [3:0] score_1,
      output reg [3:0] vgaRed,
      output reg [3:0] vgaGreen,
-     output reg [3:0] vgaBlue
+     output reg [3:0] vgaBlue,
+     input double_jump
      );
 
      wire [19:0] slime_face [19:0];
@@ -271,10 +272,12 @@ module pixel_gen(
      assign num_9[1] =  10'b0000000000;
      assign num_9[0] =  10'b0000000000;
 
-     parameter SLIME_COLOR = 12'h4f4;
-     parameter BLOCK_COLOR = 12'hf32;
+     wire [11:0] SLIME_COLOR, BLOCK_COLOR, BACKGROUND;
+
+     assign SLIME_COLOR = (double_jump) ? 12'hf11 : ((score_1 >= 4'd2) ? 12'h1f1 : 12'hfff);
+     assign BLOCK_COLOR = (score_1 >= 4'd5) ? 12'hb62 : 12'hfff;
+     assign BACKGROUND = (score_1 >= 4'd5) ? 12'h8df : 12'h000;
      parameter BLACK = 12'h000;
-     parameter BACKGROUND = 12'h8cf;
    
      always @(*) begin
           if (!valid) {vgaRed, vgaGreen, vgaBlue} = 12'h000;

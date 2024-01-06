@@ -3,7 +3,7 @@ module clk_floor(clk, rst, dclk);
     output wire dclk;
     reg [15:0] counter;
 
-    assign dclk = counter == 16'd0;
+    assign dclk = counter [14:0] == 15'd0;
 
     always @ (posedge clk) begin
         if (rst) counter <= 16'd0;

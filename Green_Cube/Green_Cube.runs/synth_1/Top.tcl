@@ -70,6 +70,8 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
+set_param chipscope.maxJobs 2
+set_param xicom.use_bs_reader 1
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a35tcpg236-1
 
@@ -89,6 +91,7 @@ OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_verilog -library xil_defaultlib {
   C:/Users/LiuUtin/Desktop/Green_Cube/KeyboardDecoder.v
+  C:/Users/LiuUtin/Desktop/Green_Cube/audio.v
   C:/Users/LiuUtin/Desktop/Green_Cube/clk_div.v
   C:/Users/LiuUtin/Desktop/Green_Cube/clk_floor.v
   C:/Users/LiuUtin/Desktop/Green_Cube/clk_vga.v

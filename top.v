@@ -1,15 +1,19 @@
-module Top(clk, rst, vgaRed, vgaBlue, vgaGreen, hsync, vsync, PS2_DATA, PS2_CLK, led);
+module Top(clk, rst, vgaRed, vgaBlue, vgaGreen, hsync, vsync, PS2_DATA, PS2_CLK, led, pmod_1, pmod_2, pmod_4);
 	input clk, rst;
     output wire [3:0] vgaRed, vgaGreen, vgaBlue;
     output hsync, vsync;
 	inout wire PS2_DATA;
     inout wire PS2_CLK;
     output wire led;
+    output pmod_1;	//AIN
+	output pmod_2;	//GAIN
+	output pmod_4;	//SHUTDOWN_N
 
     assign led = 1'b1;
 	
 	wire clk_d2;//25MHz
 	wire clk_d18;
+    wire clk_vga_x;
     wire clk_bling;
     wire clk_floor;
     wire [16:0] pixel_addr;
@@ -25,6 +29,7 @@ module Top(clk, rst, vgaRed, vgaBlue, vgaGreen, hsync, vsync, PS2_DATA, PS2_CLK,
     wire [9:0] floor_pos_x4, floor_pos_y4, floor_pos_x5, floor_pos_y5, floor_pos_x6, floor_pos_y6, floor_pos_x7, floor_pos_y7;
 
     wire [7:0] enable;
+    wire tone;
 
     wire [3:0] score_0, score_1;
     wire [3:0] last_score_0, last_score_1;
@@ -37,11 +42,13 @@ module Top(clk, rst, vgaRed, vgaBlue, vgaGreen, hsync, vsync, PS2_DATA, PS2_CLK,
     parameter [8:0] KEY_D = 9'h023;
     parameter [8:0] KEY_CODES_ENTER = 9'b0_0101_1010; // enter => 5A
     parameter [8:0] KEY_CODES_RIGHT_ENTER = 9'b1_0101_1010; // enter => 5A
+    parameter [8:0] KEY_SPACE = 9'h029; // enter => 5A
     parameter COVER = 1'b0;
     parameter GAME = 1'b1;
 
     reg game_state, next_game_state;
     reg Enter_press;
+    reg Space_press;
     wire slime_die;
     wire rst_game;
 
@@ -56,11 +63,13 @@ module Top(clk, rst, vgaRed, vgaBlue, vgaGreen, hsync, vsync, PS2_DATA, PS2_CLK,
     wire [3:0] vgaRed_cover, vgaGreen_cover, vgaBlue_cover;
     wire [3:0] vgaRed_game, vgaGreen_game, vgaBlue_game;
 
+    wire double_jump;
+
 	//clock
 	clk_div #(2) CD0(.clk(clk), .clk_d(clk_d2));
     clk_div #(26) CD1(.clk(clk), .clk_d(clk_bling));
 	// clk_div #(19) CD1(.clk(clk), .clk_d(clk_18));
-    clk_vga CV(.rst(rst), .clk(clk), .dclk(clk_18));
+    clk_vga CV(.rst(rst), .clk(clk), .dclk(clk_18), .dclk_x(clk_vga_x));
     clk_floor CF(.rst(rst), .clk(clk), .dclk(clk_floor));
 
     debounce DB_RST(.s(rst), .s_db(rst_db), .clk(clk));
@@ -119,7 +128,8 @@ module Top(clk, rst, vgaRed, vgaBlue, vgaGreen, hsync, vsync, PS2_DATA, PS2_CLK,
         .score_1(score_1),
 		.vgaRed(vgaRed_game),
 		.vgaGreen(vgaGreen_game),
-		.vgaBlue(vgaBlue_game)
+		.vgaBlue(vgaBlue_game),
+        .double_jump(double_jump)
 	);
 
     assign vgaRed = (game_state == COVER) ? vgaRed_cover : vgaRed_game;
@@ -160,6 +170,7 @@ module Top(clk, rst, vgaRed, vgaBlue, vgaGreen, hsync, vsync, PS2_DATA, PS2_CLK,
 		.rst(rst_game),
 		.clk(clk),
         .clk_vga(clk_18),
+        .clk_vga_x(clk_vga_x),
 		.x(slime_pos_x),
 		.y(slime_pos_y),
 		.key(key_state),
@@ -180,11 +191,14 @@ module Top(clk, rst, vgaRed, vgaBlue, vgaGreen, hsync, vsync, PS2_DATA, PS2_CLK,
         .floor_pos_x7(floor_pos_x7),
         .floor_pos_y7(floor_pos_y7),
         .enable(enable),
+        .Space_press(Space_press),
         .time_gap(time_gap),
         .hit_ceiling(hit_ceiling),
         .slime_die(slime_die),
         .score_0(score_0),
-        .score_1(score_1)
+        .score_1(score_1),
+        .tone(tone),
+        .double_jump(double_jump)
 	);
 
 	KeyboardDecoder key_de (
@@ -205,6 +219,17 @@ module Top(clk, rst, vgaRed, vgaBlue, vgaGreen, hsync, vsync, PS2_DATA, PS2_CLK,
         .valid(valid),
         .h_cnt(h_cnt),
         .v_cnt(v_cnt)
+    );
+
+    Audio A(
+        .clk(clk),
+        .reset(rst_game),
+        .time_gap(time_gap),
+        .game_state(game_state),
+        .tone(tone),
+        .pmod_1(pmod_1),	//AIN
+        .pmod_2(pmod_2),	//GAIN
+        .pmod_4(pmod_4)	//SHUTDOWN_N
     );
 
     always @ (posedge clk)begin
@@ -252,14 +277,21 @@ module Top(clk, rst, vgaRed, vgaBlue, vgaGreen, hsync, vsync, PS2_DATA, PS2_CLK,
                     end
                 endcase
                 key_state <= 2'b00;
+                Space_press <= 1'b0;
             end
             else begin
                 case (last_change)
                     KEY_A: begin
                         key_state <= 2'b10;
+                        Space_press <= 1'b0;
                     end
                     KEY_D: begin
                         key_state <= 2'b01;
+                        Space_press <= 1'b0;
+                    end
+                    KEY_SPACE: begin
+                        key_state <= key_state;
+                        Space_press <= 1'b1;
                     end
                     default: begin
                         key_state <= 2'b00;
