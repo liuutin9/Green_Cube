@@ -17,7 +17,7 @@ proc create_report { reportName command } {
   }
 }
 namespace eval ::optrace {
-  variable script "C:/Users/LiuUtin/Desktop/Green_Cube/Green_Cube/Green_Cube.runs/impl_1/Top.tcl"
+  variable script "D:/Green_Cube/Green_Cube/Green_Cube.runs/impl_1/Top.tcl"
   variable category "vivado_impl"
 }
 
@@ -122,7 +122,7 @@ start_step init_design
 set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
-  set_param chipscope.maxJobs 2
+  set_param chipscope.maxJobs 3
   set_param xicom.use_bs_reader 1
 OPTRACE "create in-memory project" START { }
   create_project -in_memory -part xc7a35tcpg236-1
@@ -130,18 +130,18 @@ OPTRACE "create in-memory project" START { }
   set_param project.singleFileAddWarning.threshold 0
 OPTRACE "create in-memory project" END { }
 OPTRACE "set parameters" START { }
-  set_property webtalk.parent_dir C:/Users/LiuUtin/Desktop/Green_Cube/Green_Cube/Green_Cube.cache/wt [current_project]
-  set_property parent.project_path C:/Users/LiuUtin/Desktop/Green_Cube/Green_Cube/Green_Cube.xpr [current_project]
-  set_property ip_repo_paths C:/Users/LiuUtin/Desktop/Green_Cube/ip [current_project]
+  set_property webtalk.parent_dir D:/Green_Cube/Green_Cube/Green_Cube.cache/wt [current_project]
+  set_property parent.project_path D:/Green_Cube/Green_Cube/Green_Cube.xpr [current_project]
+  set_property ip_repo_paths D:/Green_Cube/ip [current_project]
   update_ip_catalog
-  set_property ip_output_repo C:/Users/LiuUtin/Desktop/Green_Cube/Green_Cube/Green_Cube.cache/ip [current_project]
+  set_property ip_output_repo D:/Green_Cube/Green_Cube/Green_Cube.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "set parameters" END { }
 OPTRACE "add files" START { }
-  add_files -quiet C:/Users/LiuUtin/Desktop/Green_Cube/Green_Cube/Green_Cube.runs/synth_1/Top.dcp
-  read_ip -quiet C:/Users/LiuUtin/Desktop/Green_Cube/Green_Cube/Green_Cube.srcs/sources_1/ip/KeyboardCtrl_0/KeyboardCtrl_0.xci
+  add_files -quiet D:/Green_Cube/Green_Cube/Green_Cube.runs/synth_1/Top.dcp
+  read_ip -quiet D:/Green_Cube/Green_Cube/Green_Cube.srcs/sources_1/ip/KeyboardCtrl_0/KeyboardCtrl_0.xci
 OPTRACE "read constraints: implementation" START { }
-  read_xdc C:/Users/LiuUtin/Desktop/Green_Cube/cons.xdc
+  read_xdc D:/Green_Cube/cons.xdc
 OPTRACE "read constraints: implementation" END { }
 OPTRACE "add files" END { }
 OPTRACE "link_design" START { }

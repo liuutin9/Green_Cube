@@ -1,8 +1,8 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-| Date         : Sat Jan  6 14:58:10 2024
-| Host         : MSI-Modern-14-B11M running 64-bit major release  (build 9200)
+| Date         : Sat Jan 13 13:29:48 2024
+| Host         : Utin-Desktop running 64-bit major release  (build 9200)
 | Command      : report_utilization -file Top_utilization_synth.rpt -pb Top_utilization_synth.pb
 | Design       : Top
 | Device       : 7a35tcpg236-1
@@ -56,8 +56,8 @@ Table of Contents
 | 0     |          Yes |           - |            - |
 | 0     |          Yes |           - |          Set |
 | 568   |          Yes |           - |        Reset |
-| 135   |          Yes |         Set |            - |
-| 317   |          Yes |       Reset |            - |
+| 136   |          Yes |         Set |            - |
+| 316   |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -156,9 +156,9 @@ Table of Contents
 | LUT2     |  521 |                 LUT |
 | LUT5     |  402 |                 LUT |
 | CARRY4   |  382 |          CarryLogic |
-| FDRE     |  317 |        Flop & Latch |
+| FDRE     |  316 |        Flop & Latch |
 | LUT3     |  299 |                 LUT |
-| FDSE     |  135 |        Flop & Latch |
+| FDSE     |  136 |        Flop & Latch |
 | MUXF7    |   75 |               MuxFx |
 | MUXF8    |   33 |               MuxFx |
 | LUT1     |   25 |                 LUT |

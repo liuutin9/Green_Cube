@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='C:/Users/LiuUtin/Desktop/Green_Cube/Green_Cube/Green_Cube.runs/impl_1'
+HD_PWD='D:/Green_Cube/Green_Cube/Green_Cube.runs/impl_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

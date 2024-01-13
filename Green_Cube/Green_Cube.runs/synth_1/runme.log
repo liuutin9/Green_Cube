@@ -11,7 +11,7 @@
 
 source Top.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1700] Loaded user IP repository 'c:/Users/LiuUtin/Desktop/Green_Cube/ip'.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/Green_Cube/ip'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2020.2/data/ip'.
 Command: synth_design -top Top -part xc7a35tcpg236-1
 Starting synth_design
@@ -20,11 +20,11 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a35t
 INFO: [Device 21-403] Loading part xc7a35tcpg236-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 16996
+INFO: [Synth 8-7075] Helper process launched with PID 10204
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 1017.414 ; gain = 0.000
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:03 . Memory (MB): peak = 1014.648 ; gain = 0.000
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'Top' [C:/Users/LiuUtin/Desktop/Green_Cube/top.v:1]
+INFO: [Synth 8-6157] synthesizing module 'Top' [D:/Green_Cube/top.v:1]
 	Parameter KEY_A bound to: 9'b000011100 
 	Parameter KEY_D bound to: 9'b000100011 
 	Parameter KEY_CODES_ENTER bound to: 9'b001011010 
@@ -32,37 +32,37 @@ INFO: [Synth 8-6157] synthesizing module 'Top' [C:/Users/LiuUtin/Desktop/Green_C
 	Parameter KEY_SPACE bound to: 9'b000101001 
 	Parameter COVER bound to: 1'b0 
 	Parameter GAME bound to: 1'b1 
-INFO: [Synth 8-6157] synthesizing module 'clk_div' [C:/Users/LiuUtin/Desktop/Green_Cube/clk_div.v:1]
+INFO: [Synth 8-6157] synthesizing module 'clk_div' [D:/Green_Cube/clk_div.v:1]
 	Parameter n bound to: 2 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'clk_div' (1#1) [C:/Users/LiuUtin/Desktop/Green_Cube/clk_div.v:1]
-INFO: [Synth 8-6157] synthesizing module 'clk_div__parameterized0' [C:/Users/LiuUtin/Desktop/Green_Cube/clk_div.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'clk_div' (1#1) [D:/Green_Cube/clk_div.v:1]
+INFO: [Synth 8-6157] synthesizing module 'clk_div__parameterized0' [D:/Green_Cube/clk_div.v:1]
 	Parameter n bound to: 26 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'clk_div__parameterized0' (1#1) [C:/Users/LiuUtin/Desktop/Green_Cube/clk_div.v:1]
-INFO: [Synth 8-6157] synthesizing module 'clk_vga' [C:/Users/LiuUtin/Desktop/Green_Cube/clk_vga.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'clk_vga' (2#1) [C:/Users/LiuUtin/Desktop/Green_Cube/clk_vga.v:1]
-INFO: [Synth 8-6157] synthesizing module 'clk_floor' [C:/Users/LiuUtin/Desktop/Green_Cube/clk_floor.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'clk_floor' (3#1) [C:/Users/LiuUtin/Desktop/Green_Cube/clk_floor.v:1]
-INFO: [Synth 8-6157] synthesizing module 'debounce' [C:/Users/LiuUtin/Desktop/Green_Cube/debounce.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'debounce' (4#1) [C:/Users/LiuUtin/Desktop/Green_Cube/debounce.v:1]
-INFO: [Synth 8-6157] synthesizing module 'onepulse' [C:/Users/LiuUtin/Desktop/Green_Cube/onepulse.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'onepulse' (5#1) [C:/Users/LiuUtin/Desktop/Green_Cube/onepulse.v:1]
-INFO: [Synth 8-6157] synthesizing module 'record' [C:/Users/LiuUtin/Desktop/Green_Cube/record.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'record' (6#1) [C:/Users/LiuUtin/Desktop/Green_Cube/record.v:1]
-INFO: [Synth 8-6157] synthesizing module 'cover' [C:/Users/LiuUtin/Desktop/Green_Cube/cover.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'cover' (7#1) [C:/Users/LiuUtin/Desktop/Green_Cube/cover.v:1]
-INFO: [Synth 8-6157] synthesizing module 'pixel_gen' [C:/Users/LiuUtin/Desktop/Green_Cube/pixel_gen.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'clk_div__parameterized0' (1#1) [D:/Green_Cube/clk_div.v:1]
+INFO: [Synth 8-6157] synthesizing module 'clk_vga' [D:/Green_Cube/clk_vga.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'clk_vga' (2#1) [D:/Green_Cube/clk_vga.v:1]
+INFO: [Synth 8-6157] synthesizing module 'clk_floor' [D:/Green_Cube/clk_floor.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'clk_floor' (3#1) [D:/Green_Cube/clk_floor.v:1]
+INFO: [Synth 8-6157] synthesizing module 'debounce' [D:/Green_Cube/debounce.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'debounce' (4#1) [D:/Green_Cube/debounce.v:1]
+INFO: [Synth 8-6157] synthesizing module 'onepulse' [D:/Green_Cube/onepulse.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'onepulse' (5#1) [D:/Green_Cube/onepulse.v:1]
+INFO: [Synth 8-6157] synthesizing module 'record' [D:/Green_Cube/record.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'record' (6#1) [D:/Green_Cube/record.v:1]
+INFO: [Synth 8-6157] synthesizing module 'cover' [D:/Green_Cube/cover.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'cover' (7#1) [D:/Green_Cube/cover.v:1]
+INFO: [Synth 8-6157] synthesizing module 'pixel_gen' [D:/Green_Cube/pixel_gen.v:1]
 	Parameter BLACK bound to: 12'b000000000000 
-INFO: [Synth 8-6155] done synthesizing module 'pixel_gen' (8#1) [C:/Users/LiuUtin/Desktop/Green_Cube/pixel_gen.v:1]
-INFO: [Synth 8-6157] synthesizing module 'floor_gen' [C:/Users/LiuUtin/Desktop/Green_Cube/floor.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'floor_gen' (9#1) [C:/Users/LiuUtin/Desktop/Green_Cube/floor.v:1]
-INFO: [Synth 8-6157] synthesizing module 'slime_move' [C:/Users/LiuUtin/Desktop/Green_Cube/slime_move.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'pixel_gen' (8#1) [D:/Green_Cube/pixel_gen.v:1]
+INFO: [Synth 8-6157] synthesizing module 'floor_gen' [D:/Green_Cube/floor.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'floor_gen' (9#1) [D:/Green_Cube/floor.v:1]
+INFO: [Synth 8-6157] synthesizing module 'slime_move' [D:/Green_Cube/slime_move.v:1]
 	Parameter INIT bound to: 2'b00 
 	Parameter LEFT bound to: 2'b01 
 	Parameter RIGHT bound to: 2'b10 
 	Parameter JUMP_UP bound to: 1'b0 
 	Parameter FALL_DOWN bound to: 1'b1 
-INFO: [Synth 8-6155] done synthesizing module 'slime_move' (10#1) [C:/Users/LiuUtin/Desktop/Green_Cube/slime_move.v:1]
-INFO: [Synth 8-6157] synthesizing module 'KeyboardDecoder' [C:/Users/LiuUtin/Desktop/Green_Cube/KeyboardDecoder.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'slime_move' (10#1) [D:/Green_Cube/slime_move.v:1]
+INFO: [Synth 8-6157] synthesizing module 'KeyboardDecoder' [D:/Green_Cube/KeyboardDecoder.v:1]
 	Parameter INIT bound to: 2'b00 
 	Parameter WAIT_FOR_SIGNAL bound to: 2'b01 
 	Parameter GET_SIGNAL_DOWN bound to: 2'b10 
@@ -70,73 +70,73 @@ INFO: [Synth 8-6157] synthesizing module 'KeyboardDecoder' [C:/Users/LiuUtin/Des
 	Parameter IS_INIT bound to: 8'b10101010 
 	Parameter IS_EXTEND bound to: 8'b11100000 
 	Parameter IS_BREAK bound to: 8'b11110000 
-INFO: [Synth 8-6157] synthesizing module 'KeyboardCtrl_0' [C:/Users/LiuUtin/Desktop/Green_Cube/Green_Cube/Green_Cube.runs/synth_1/.Xil/Vivado-14960-MSI-Modern-14-B11M/realtime/KeyboardCtrl_0_stub.v:6]
-INFO: [Synth 8-6155] done synthesizing module 'KeyboardCtrl_0' (11#1) [C:/Users/LiuUtin/Desktop/Green_Cube/Green_Cube/Green_Cube.runs/synth_1/.Xil/Vivado-14960-MSI-Modern-14-B11M/realtime/KeyboardCtrl_0_stub.v:6]
-INFO: [Synth 8-226] default block is never used [C:/Users/LiuUtin/Desktop/Green_Cube/KeyboardDecoder.v:69]
-INFO: [Synth 8-226] default block is never used [C:/Users/LiuUtin/Desktop/Green_Cube/KeyboardDecoder.v:79]
-INFO: [Synth 8-226] default block is never used [C:/Users/LiuUtin/Desktop/Green_Cube/KeyboardDecoder.v:89]
-INFO: [Synth 8-226] default block is never used [C:/Users/LiuUtin/Desktop/Green_Cube/KeyboardDecoder.v:99]
-INFO: [Synth 8-226] default block is never used [C:/Users/LiuUtin/Desktop/Green_Cube/KeyboardDecoder.v:109]
-INFO: [Synth 8-6155] done synthesizing module 'KeyboardDecoder' (12#1) [C:/Users/LiuUtin/Desktop/Green_Cube/KeyboardDecoder.v:1]
-INFO: [Synth 8-6157] synthesizing module 'vga_controller' [C:/Users/LiuUtin/Desktop/Green_Cube/vga_controller.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'vga_controller' (13#1) [C:/Users/LiuUtin/Desktop/Green_Cube/vga_controller.v:1]
-INFO: [Synth 8-6157] synthesizing module 'Audio' [C:/Users/LiuUtin/Desktop/Green_Cube/audio.v:1]
-INFO: [Synth 8-6157] synthesizing module 'Decoder' [C:/Users/LiuUtin/Desktop/Green_Cube/audio.v:37]
-INFO: [Synth 8-6155] done synthesizing module 'Decoder' (14#1) [C:/Users/LiuUtin/Desktop/Green_Cube/audio.v:37]
-INFO: [Synth 8-6157] synthesizing module 'PWM_gen' [C:/Users/LiuUtin/Desktop/Green_Cube/audio.v:83]
-INFO: [Synth 8-6155] done synthesizing module 'PWM_gen' (15#1) [C:/Users/LiuUtin/Desktop/Green_Cube/audio.v:83]
-INFO: [Synth 8-6155] done synthesizing module 'Audio' (16#1) [C:/Users/LiuUtin/Desktop/Green_Cube/audio.v:1]
-INFO: [Synth 8-6155] done synthesizing module 'Top' (17#1) [C:/Users/LiuUtin/Desktop/Green_Cube/top.v:1]
+INFO: [Synth 8-6157] synthesizing module 'KeyboardCtrl_0' [D:/Green_Cube/Green_Cube/Green_Cube.runs/synth_1/.Xil/Vivado-2588-Utin-Desktop/realtime/KeyboardCtrl_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'KeyboardCtrl_0' (11#1) [D:/Green_Cube/Green_Cube/Green_Cube.runs/synth_1/.Xil/Vivado-2588-Utin-Desktop/realtime/KeyboardCtrl_0_stub.v:6]
+INFO: [Synth 8-226] default block is never used [D:/Green_Cube/KeyboardDecoder.v:69]
+INFO: [Synth 8-226] default block is never used [D:/Green_Cube/KeyboardDecoder.v:79]
+INFO: [Synth 8-226] default block is never used [D:/Green_Cube/KeyboardDecoder.v:89]
+INFO: [Synth 8-226] default block is never used [D:/Green_Cube/KeyboardDecoder.v:99]
+INFO: [Synth 8-226] default block is never used [D:/Green_Cube/KeyboardDecoder.v:109]
+INFO: [Synth 8-6155] done synthesizing module 'KeyboardDecoder' (12#1) [D:/Green_Cube/KeyboardDecoder.v:1]
+INFO: [Synth 8-6157] synthesizing module 'vga_controller' [D:/Green_Cube/vga_controller.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'vga_controller' (13#1) [D:/Green_Cube/vga_controller.v:1]
+INFO: [Synth 8-6157] synthesizing module 'Audio' [D:/Green_Cube/audio.v:1]
+INFO: [Synth 8-6157] synthesizing module 'Decoder' [D:/Green_Cube/audio.v:37]
+INFO: [Synth 8-6155] done synthesizing module 'Decoder' (14#1) [D:/Green_Cube/audio.v:37]
+INFO: [Synth 8-6157] synthesizing module 'PWM_gen' [D:/Green_Cube/audio.v:83]
+INFO: [Synth 8-6155] done synthesizing module 'PWM_gen' (15#1) [D:/Green_Cube/audio.v:83]
+INFO: [Synth 8-6155] done synthesizing module 'Audio' (16#1) [D:/Green_Cube/audio.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'Top' (17#1) [D:/Green_Cube/top.v:1]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1017.414 ; gain = 0.000
+Finished RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1014.648 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1017.414 ; gain = 0.000
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 1014.648 ; gain = 0.000
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1017.414 ; gain = 0.000
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:03 ; elapsed = 00:00:05 . Memory (MB): peak = 1014.648 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.038 . Memory (MB): peak = 1017.414 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.039 . Memory (MB): peak = 1014.648 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [c:/Users/LiuUtin/Desktop/Green_Cube/Green_Cube/Green_Cube.gen/sources_1/ip/KeyboardCtrl_0/KeyboardCtrl_0/KeyboardCtrl_0_in_context.xdc] for cell 'key_de/inst'
-Finished Parsing XDC File [c:/Users/LiuUtin/Desktop/Green_Cube/Green_Cube/Green_Cube.gen/sources_1/ip/KeyboardCtrl_0/KeyboardCtrl_0/KeyboardCtrl_0_in_context.xdc] for cell 'key_de/inst'
-Parsing XDC File [C:/Users/LiuUtin/Desktop/Green_Cube/cons.xdc]
-Finished Parsing XDC File [C:/Users/LiuUtin/Desktop/Green_Cube/cons.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [C:/Users/LiuUtin/Desktop/Green_Cube/cons.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Top_propImpl.xdc].
+Parsing XDC File [d:/Green_Cube/Green_Cube/Green_Cube.gen/sources_1/ip/KeyboardCtrl_0/KeyboardCtrl_0/KeyboardCtrl_0_in_context.xdc] for cell 'key_de/inst'
+Finished Parsing XDC File [d:/Green_Cube/Green_Cube/Green_Cube.gen/sources_1/ip/KeyboardCtrl_0/KeyboardCtrl_0/KeyboardCtrl_0_in_context.xdc] for cell 'key_de/inst'
+Parsing XDC File [D:/Green_Cube/cons.xdc]
+Finished Parsing XDC File [D:/Green_Cube/cons.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/Green_Cube/cons.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/Top_propImpl.xdc].
 Resolution: To avoid this warning, move constraints listed in [.Xil/Top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1108.008 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1081.980 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.008 . Memory (MB): peak = 1108.008 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1081.980 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1108.008 ; gain = 90.594
+Finished Constraint Validation : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 1081.980 ; gain = 67.332
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7a35tcpg236-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1108.008 ; gain = 90.594
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 1081.980 ; gain = 67.332
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property IO_BUFFER_TYPE = NONE for PS2_CLK. (constraint file  c:/Users/LiuUtin/Desktop/Green_Cube/Green_Cube/Green_Cube.gen/sources_1/ip/KeyboardCtrl_0/KeyboardCtrl_0/KeyboardCtrl_0_in_context.xdc, line 1).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for PS2_CLK. (constraint file  c:/Users/LiuUtin/Desktop/Green_Cube/Green_Cube/Green_Cube.gen/sources_1/ip/KeyboardCtrl_0/KeyboardCtrl_0/KeyboardCtrl_0_in_context.xdc, line 2).
-Applied set_property IO_BUFFER_TYPE = NONE for PS2_DATA. (constraint file  c:/Users/LiuUtin/Desktop/Green_Cube/Green_Cube/Green_Cube.gen/sources_1/ip/KeyboardCtrl_0/KeyboardCtrl_0/KeyboardCtrl_0_in_context.xdc, line 3).
-Applied set_property CLOCK_BUFFER_TYPE = NONE for PS2_DATA. (constraint file  c:/Users/LiuUtin/Desktop/Green_Cube/Green_Cube/Green_Cube.gen/sources_1/ip/KeyboardCtrl_0/KeyboardCtrl_0/KeyboardCtrl_0_in_context.xdc, line 4).
+Applied set_property IO_BUFFER_TYPE = NONE for PS2_CLK. (constraint file  d:/Green_Cube/Green_Cube/Green_Cube.gen/sources_1/ip/KeyboardCtrl_0/KeyboardCtrl_0/KeyboardCtrl_0_in_context.xdc, line 1).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for PS2_CLK. (constraint file  d:/Green_Cube/Green_Cube/Green_Cube.gen/sources_1/ip/KeyboardCtrl_0/KeyboardCtrl_0/KeyboardCtrl_0_in_context.xdc, line 2).
+Applied set_property IO_BUFFER_TYPE = NONE for PS2_DATA. (constraint file  d:/Green_Cube/Green_Cube/Green_Cube.gen/sources_1/ip/KeyboardCtrl_0/KeyboardCtrl_0/KeyboardCtrl_0_in_context.xdc, line 3).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for PS2_DATA. (constraint file  d:/Green_Cube/Green_Cube/Green_Cube.gen/sources_1/ip/KeyboardCtrl_0/KeyboardCtrl_0/KeyboardCtrl_0_in_context.xdc, line 4).
 Applied set_property KEEP_HIERARCHY = SOFT for key_de/inst. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1108.008 ; gain = 90.594
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:07 ; elapsed = 00:00:09 . Memory (MB): peak = 1081.980 ; gain = 67.332
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'KeyboardDecoder'
 ---------------------------------------------------------------------------------------------------
@@ -149,7 +149,7 @@ INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'Keybo
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'KeyboardDecoder'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 1108.008 ; gain = 90.594
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 1081.980 ; gain = 67.332
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -219,7 +219,7 @@ DSP Report: Generating DSP count_duty0, operation Mode is: A*B.
 DSP Report: operator count_duty0 is absorbed into DSP count_duty0.
 DSP Report: operator count_duty0 is absorbed into DSP count_duty0.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:00:27 . Memory (MB): peak = 1108.008 ; gain = 90.594
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:23 . Memory (MB): peak = 1081.980 ; gain = 67.332
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -251,8 +251,10 @@ ROM: Preliminary Mapping	Report
 |cover       | num_6      | 32x4          | LUT            | 
 |cover       | num_9      | 32x4          | LUT            | 
 |pixel_gen   | num_2      | 32x4          | LUT            | 
+|pixel_gen   | num_5      | 32x4          | LUT            | 
 |pixel_gen   | num_6      | 32x4          | LUT            | 
 |pixel_gen   | num_9      | 32x4          | LUT            | 
+|pixel_gen   | slime_face | 32x9          | LUT            | 
 +------------+------------+---------------+----------------+
 
 
@@ -271,19 +273,19 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 1108.008 ; gain = 90.594
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:24 ; elapsed = 00:00:29 . Memory (MB): peak = 1105.273 ; gain = 90.625
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:32 ; elapsed = 00:00:34 . Memory (MB): peak = 1109.445 ; gain = 92.031
+Finished Timing Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:00:29 . Memory (MB): peak = 1109.598 ; gain = 94.949
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:33 ; elapsed = 00:00:35 . Memory (MB): peak = 1238.828 ; gain = 221.414
+Finished Technology Mapping : Time (s): cpu = 00:00:26 ; elapsed = 00:00:30 . Memory (MB): peak = 1239.223 ; gain = 224.574
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -301,37 +303,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:36 ; elapsed = 00:00:38 . Memory (MB): peak = 1252.633 ; gain = 235.219
+Finished IO Insertion : Time (s): cpu = 00:00:28 ; elapsed = 00:00:32 . Memory (MB): peak = 1253.023 ; gain = 238.375
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:36 ; elapsed = 00:00:38 . Memory (MB): peak = 1252.633 ; gain = 235.219
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:28 ; elapsed = 00:00:32 . Memory (MB): peak = 1253.023 ; gain = 238.375
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:36 ; elapsed = 00:00:38 . Memory (MB): peak = 1252.633 ; gain = 235.219
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:28 ; elapsed = 00:00:32 . Memory (MB): peak = 1253.023 ; gain = 238.375
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:36 ; elapsed = 00:00:38 . Memory (MB): peak = 1252.633 ; gain = 235.219
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:28 ; elapsed = 00:00:32 . Memory (MB): peak = 1253.023 ; gain = 238.375
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:36 ; elapsed = 00:00:38 . Memory (MB): peak = 1252.633 ; gain = 235.219
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:28 ; elapsed = 00:00:32 . Memory (MB): peak = 1253.023 ; gain = 238.375
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:36 ; elapsed = 00:00:38 . Memory (MB): peak = 1252.633 ; gain = 235.219
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:28 ; elapsed = 00:00:32 . Memory (MB): peak = 1253.023 ; gain = 238.375
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -361,31 +363,31 @@ Report Cell Usage:
 |11    |MUXF7        |    75|
 |12    |MUXF8        |    33|
 |13    |FDCE         |   568|
-|14    |FDRE         |   317|
-|15    |FDSE         |   135|
+|14    |FDRE         |   316|
+|15    |FDSE         |   136|
 |16    |IBUF         |     2|
 |17    |OBUF         |    18|
 +------+-------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:36 ; elapsed = 00:00:38 . Memory (MB): peak = 1252.633 ; gain = 235.219
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:28 ; elapsed = 00:00:32 . Memory (MB): peak = 1253.023 ; gain = 238.375
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:30 ; elapsed = 00:00:37 . Memory (MB): peak = 1252.633 ; gain = 144.625
-Synthesis Optimization Complete : Time (s): cpu = 00:00:36 ; elapsed = 00:00:39 . Memory (MB): peak = 1252.633 ; gain = 235.219
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:23 ; elapsed = 00:00:31 . Memory (MB): peak = 1253.023 ; gain = 171.043
+Synthesis Optimization Complete : Time (s): cpu = 00:00:28 ; elapsed = 00:00:33 . Memory (MB): peak = 1253.023 ; gain = 238.375
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.039 . Memory (MB): peak = 1252.633 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.039 . Memory (MB): peak = 1253.023 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 491 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1252.633 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1253.023 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
 61 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:41 ; elapsed = 00:00:44 . Memory (MB): peak = 1252.633 ; gain = 235.219
-INFO: [Common 17-1381] The checkpoint 'C:/Users/LiuUtin/Desktop/Green_Cube/Green_Cube/Green_Cube.runs/synth_1/Top.dcp' has been generated.
+synth_design: Time (s): cpu = 00:00:31 ; elapsed = 00:00:41 . Memory (MB): peak = 1253.023 ; gain = 238.375
+INFO: [Common 17-1381] The checkpoint 'D:/Green_Cube/Green_Cube/Green_Cube.runs/synth_1/Top.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file Top_utilization_synth.rpt -pb Top_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Sat Jan  6 14:58:10 2024...
+INFO: [Common 17-206] Exiting Vivado at Sat Jan 13 13:29:48 2024...
