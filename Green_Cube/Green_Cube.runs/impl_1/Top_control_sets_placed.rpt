@@ -1,12 +1,12 @@
-Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
-------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-| Date         : Sat Jan 13 13:30:15 2024
-| Host         : Utin-Desktop running 64-bit major release  (build 9200)
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
+---------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
+| Date         : Mon Apr 28 22:37:20 2025
+| Host         : Prestige14 running 64-bit major release  (build 9200)
 | Command      : report_control_sets -verbose -file Top_control_sets_placed.rpt
 | Design       : Top
 | Device       : xc7a35t
-------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------
 
 Control Set Information
 
@@ -58,12 +58,12 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |              46 |           18 |
-| No           | No                    | Yes                    |              97 |           32 |
-| No           | Yes                   | No                     |              55 |           19 |
+| No           | No                    | No                     |              46 |           19 |
+| No           | No                    | Yes                    |              97 |           31 |
+| No           | Yes                   | No                     |              55 |           18 |
 | Yes          | No                    | No                     |               0 |            0 |
-| Yes          | No                    | Yes                    |             562 |          162 |
-| Yes          | Yes                   | No                     |             351 |          131 |
+| Yes          | No                    | Yes                    |             562 |          153 |
+| Yes          | Yes                   | No                     |             351 |          150 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
@@ -73,30 +73,30 @@ Table of Contents
 +----------------+---------------------------------------------------+--------------------------+------------------+----------------+--------------+
 |  Clock Signal  |                   Enable Signal                   |     Set/Reset Signal     | Slice Load Count | Bel Load Count | Bels / Slice |
 +----------------+---------------------------------------------------+--------------------------+------------------+----------------+--------------+
-|  CD0/Q[0]      |                                                   | DB_RST/rst_db            |                2 |              2 |         1.00 |
 |  clk_IBUF_BUFG | key_de/inst/inst/lock_status0                     | DB_RST/rst_db            |                1 |              2 |         2.00 |
+|  CD0/Q[0]      |                                                   | DB_RST/rst_db            |                2 |              2 |         1.00 |
 |  clk_IBUF_BUFG | SM/score_0[3]_i_1_n_0                             | SM/rst_game              |                2 |              4 |         2.00 |
-|  clk_IBUF_BUFG | SM/score_1[3]_i_1_n_0                             | SM/rst_game              |                3 |              4 |         1.33 |
+|  clk_IBUF_BUFG | SM/score_1[3]_i_1_n_0                             | SM/rst_game              |                1 |              4 |         4.00 |
 |  clk_IBUF_BUFG | key_de/inst/inst/Ps2Interface_i/bits_count        | DB_RST/rst_db            |                1 |              4 |         4.00 |
 |  clk_IBUF_BUFG |                                                   | FG/RSTB                  |                1 |              5 |         5.00 |
 |  clk_IBUF_BUFG | SM/slime_die                                      | rst_IBUF                 |                5 |              8 |         1.60 |
+|  clk_IBUF_BUFG | key_de/inst/inst/Ps2Interface_i/rx_valid          | DB_RST/rst_db            |                2 |              8 |         4.00 |
+|  clk_IBUF_BUFG | key_de/inst/inst/Ps2Interface_i/rx_finish         | DB_RST/rst_db            |                1 |              8 |         8.00 |
 |  clk_IBUF_BUFG | SM/E[0]                                           | rst_IBUF                 |                3 |              8 |         2.67 |
-|  clk_IBUF_BUFG | key_de/inst/inst/Ps2Interface_i/rx_finish         | DB_RST/rst_db            |                3 |              8 |         2.67 |
-|  clk_IBUF_BUFG | key_de/inst/inst/Ps2Interface_i/rx_valid          | DB_RST/rst_db            |                3 |              8 |         2.67 |
-|  clk_IBUF_BUFG | SM/time_gap[8]_i_2_n_0                            | SM/time_gap[8]_i_1_n_0   |                4 |              9 |         2.25 |
-|  CD0/Q[0]      | VC0/line_cnt                                      | VC0/line_cnt[9]_i_1_n_0  |                4 |             10 |         2.50 |
-|  clk_IBUF_BUFG | CV/E[0]                                           | SM/rst_game              |                7 |             10 |         1.43 |
-|  clk_IBUF_BUFG | SM/y[9]_i_1_n_0                                   | SM/rst_game              |                3 |             10 |         3.33 |
-|  clk_IBUF_BUFG | key_de/inst/inst/Ps2Interface_i/frame[10]_i_1_n_0 | DB_RST/rst_db            |                2 |             11 |         5.50 |
-|  CD0/Q[0]      |                                                   | VC0/pixel_cnt[9]_i_1_n_0 |                6 |             13 |         2.17 |
-|  clk_IBUF_BUFG | key_de/next_key                                   | DB_RST/rst_db            |                4 |             17 |         4.25 |
+|  clk_IBUF_BUFG | SM/time_gap[8]_i_2_n_0                            | SM/time_gap[8]_i_1_n_0   |                5 |              9 |         1.80 |
+|  clk_IBUF_BUFG | SM/y[9]_i_1_n_0                                   | SM/rst_game              |                6 |             10 |         1.67 |
+|  clk_IBUF_BUFG | CV/E[0]                                           | SM/rst_game              |                6 |             10 |         1.67 |
+|  CD0/Q[0]      | VC0/line_cnt                                      | VC0/line_cnt[9]_i_1_n_0  |                3 |             10 |         3.33 |
+|  clk_IBUF_BUFG | key_de/inst/inst/Ps2Interface_i/frame[10]_i_1_n_0 | DB_RST/rst_db            |                3 |             11 |         3.67 |
+|  CD0/Q[0]      |                                                   | VC0/pixel_cnt[9]_i_1_n_0 |                5 |             13 |         2.60 |
+|  clk_IBUF_BUFG | key_de/next_key                                   | DB_RST/rst_db            |                5 |             17 |         3.40 |
 |  clk_IBUF_BUFG |                                                   | SM/rst_game              |                9 |             33 |         3.67 |
 |  clk_IBUF_BUFG |                                                   | rst_IBUF                 |               10 |             35 |         3.50 |
-|  clk_IBUF_BUFG |                                                   |                          |               18 |             46 |         2.56 |
-|  clk_IBUF_BUFG |                                                   | DB_RST/rst_db            |               23 |             64 |         2.78 |
-|  clk_IBUF_BUFG | CF/E[0]                                           | SM/rst_game              |               41 |            144 |         3.51 |
-|  clk_IBUF_BUFG | CV/counter_reg[10]_0[0]                           | SM/rst_game              |               59 |            144 |         2.44 |
-|  clk_IBUF_BUFG | key_de/op/E[0]                                    | DB_RST/rst_db            |              148 |            512 |         3.46 |
+|  clk_IBUF_BUFG |                                                   |                          |               19 |             46 |         2.42 |
+|  clk_IBUF_BUFG |                                                   | DB_RST/rst_db            |               22 |             64 |         2.91 |
+|  clk_IBUF_BUFG | CF/E[0]                                           | SM/rst_game              |               53 |            144 |         2.72 |
+|  clk_IBUF_BUFG | CV/counter_reg[10]_0[0]                           | SM/rst_game              |               66 |            144 |         2.18 |
+|  clk_IBUF_BUFG | key_de/op/E[0]                                    | DB_RST/rst_db            |              140 |            512 |         3.66 |
 +----------------+---------------------------------------------------+--------------------------+------------------+----------------+--------------+
 
 

@@ -1,0 +1,22 @@
+0.7
+2020.2
+Nov  8 2024
+22:36:57
+C:/Users/liuut/Desktop/Green_Cube/Green_Cube/Green_Cube.gen/sources_1/ip/KeyboardCtrl_0/sim/KeyboardCtrl_0.v,1745850719,verilog,,C:/Users/liuut/Desktop/Green_Cube/KeyboardDecoder.v,,KeyboardCtrl_0,,,,,,,,
+C:/Users/liuut/Desktop/Green_Cube/Green_Cube/Green_Cube.gen/sources_1/ip/KeyboardCtrl_0/src/KeyboardCtrl.v,1745850719,verilog,,C:/Users/liuut/Desktop/Green_Cube/Green_Cube/Green_Cube.gen/sources_1/ip/KeyboardCtrl_0/sim/KeyboardCtrl_0.v,,KeyboardCtrl,,,,,,,,
+C:/Users/liuut/Desktop/Green_Cube/Green_Cube/Green_Cube.gen/sources_1/ip/KeyboardCtrl_0/src/Ps2Interface.v,1745850719,verilog,,C:/Users/liuut/Desktop/Green_Cube/Green_Cube/Green_Cube.gen/sources_1/ip/KeyboardCtrl_0/src/KeyboardCtrl.v,,Ps2Interface,,,,,,,,
+C:/Users/liuut/Desktop/Green_Cube/Green_Cube/Green_Cube.sim/sim_1/behav/xsim/glbl.v,1724786425,verilog,,,,glbl,,,,,,,,
+C:/Users/liuut/Desktop/Green_Cube/KeyboardDecoder.v,1745850719,verilog,,C:/Users/liuut/Desktop/Green_Cube/audio.v,,KeyboardDecoder,,,,,,,,
+C:/Users/liuut/Desktop/Green_Cube/audio.v,1745850719,verilog,,C:/Users/liuut/Desktop/Green_Cube/clk_div.v,,Audio;Decoder;PWM_gen,,,,,,,,
+C:/Users/liuut/Desktop/Green_Cube/clk_div.v,1745850719,verilog,,C:/Users/liuut/Desktop/Green_Cube/clk_floor.v,,clk_div,,,,,,,,
+C:/Users/liuut/Desktop/Green_Cube/clk_floor.v,1745850719,verilog,,C:/Users/liuut/Desktop/Green_Cube/clk_vga.v,,clk_floor,,,,,,,,
+C:/Users/liuut/Desktop/Green_Cube/clk_vga.v,1745850719,verilog,,C:/Users/liuut/Desktop/Green_Cube/cover.v,,clk_vga,,,,,,,,
+C:/Users/liuut/Desktop/Green_Cube/cover.v,1745850719,verilog,,C:/Users/liuut/Desktop/Green_Cube/debounce.v,,cover,,,,,,,,
+C:/Users/liuut/Desktop/Green_Cube/debounce.v,1745850719,verilog,,C:/Users/liuut/Desktop/Green_Cube/floor.v,,debounce,,,,,,,,
+C:/Users/liuut/Desktop/Green_Cube/floor.v,1745850719,verilog,,C:/Users/liuut/Desktop/Green_Cube/onepulse.v,,floor_gen,,,,,,,,
+C:/Users/liuut/Desktop/Green_Cube/onepulse.v,1745850719,verilog,,C:/Users/liuut/Desktop/Green_Cube/pixel_gen.v,,onepulse,,,,,,,,
+C:/Users/liuut/Desktop/Green_Cube/pixel_gen.v,1745850719,verilog,,C:/Users/liuut/Desktop/Green_Cube/record.v,,pixel_gen,,,,,,,,
+C:/Users/liuut/Desktop/Green_Cube/record.v,1745850719,verilog,,C:/Users/liuut/Desktop/Green_Cube/slime_move.v,,record,,,,,,,,
+C:/Users/liuut/Desktop/Green_Cube/slime_move.v,1745850719,verilog,,C:/Users/liuut/Desktop/Green_Cube/vga_controller.v,,slime_move,,,,,,,,
+C:/Users/liuut/Desktop/Green_Cube/top.v,1745850719,verilog,,,,Top,,,,,,,,
+C:/Users/liuut/Desktop/Green_Cube/vga_controller.v,1745850719,verilog,,C:/Users/liuut/Desktop/Green_Cube/top.v,,vga_controller,,,,,,,,

@@ -1,0 +1,25 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  \
+"../../../../Green_Cube.gen/sources_1/ip/KeyboardCtrl_0/src/Ps2Interface.v" \
+"../../../../Green_Cube.gen/sources_1/ip/KeyboardCtrl_0/src/KeyboardCtrl.v" \
+"../../../../Green_Cube.gen/sources_1/ip/KeyboardCtrl_0/sim/KeyboardCtrl_0.v" \
+"../../../../../KeyboardDecoder.v" \
+"../../../../../audio.v" \
+"../../../../../clk_div.v" \
+"../../../../../clk_floor.v" \
+"../../../../../clk_vga.v" \
+"../../../../../cover.v" \
+"../../../../../debounce.v" \
+"../../../../../floor.v" \
+"../../../../../onepulse.v" \
+"../../../../../pixel_gen.v" \
+"../../../../../record.v" \
+"../../../../../slime_move.v" \
+"../../../../../vga_controller.v" \
+"../../../../../top.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

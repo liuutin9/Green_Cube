@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <GenRun Id="KeyboardCtrl_0_synth_1" LaunchPart="xc7a35tcpg236-1" LaunchTime="1702910435">
-  <File Type="PA-TCL" Name="KeyboardCtrl_0.tcl"/>
   <File Type="REPORTS-TCL" Name="KeyboardCtrl_0_reports.tcl"/>
-  <File Type="RDS-RDS" Name="KeyboardCtrl_0.vds"/>
   <File Type="RDS-UTIL" Name="KeyboardCtrl_0_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="KeyboardCtrl_0_utilization_synth.pb"/>
+  <File Type="PA-TCL" Name="KeyboardCtrl_0.tcl"/>
+  <File Type="RDS-RDS" Name="KeyboardCtrl_0.vds"/>
   <File Type="RDS-DCP" Name="KeyboardCtrl_0.dcp"/>
   <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/KeyboardCtrl_0">
     <File Path="$PSRCDIR/sources_1/ip/KeyboardCtrl_0/KeyboardCtrl_0.xci">

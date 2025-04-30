@@ -1,8 +1,8 @@
-Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 -----------------------------------------------------------------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-| Date         : Sat Jan 13 13:30:30 2024
-| Host         : Utin-Desktop running 64-bit major release  (build 9200)
+| Tool Version : Vivado v.2024.2 (win64) Build 5239630 Fri Nov 08 22:35:27 MST 2024
+| Date         : Mon Apr 28 22:37:46 2025
+| Host         : Prestige14 running 64-bit major release  (build 9200)
 | Command      : report_methodology -file Top_methodology_drc_routed.rpt -pb Top_methodology_drc_routed.pb -rpx Top_methodology_drc_routed.rpx
 | Design       : Top
 | Device       : xc7a35tcpg236-1
@@ -22,14 +22,14 @@ Table of Contents
             Netlist: netlist
           Floorplan: design_1
       Design limits: <entire design considered>
-             Max violations: <unlimited>
-             Violations found: 1002
-+-----------+------------------+------------------------------+------------+
-| Rule      | Severity         | Description                  | Violations |
-+-----------+------------------+------------------------------+------------+
-| TIMING-17 | Critical Warning | Non-clocked sequential cell  | 1000       |
-| LUTAR-1   | Warning          | LUT drives async reset alert | 2          |
-+-----------+------------------+------------------------------+------------+
+             Max checks: <unlimited>
+             Checks found: 1002
++-----------+------------------+------------------------------+--------+
+| Rule      | Severity         | Description                  | Checks |
++-----------+------------------+------------------------------+--------+
+| TIMING-17 | Critical Warning | Non-clocked sequential cell  | 1000   |
+| LUTAR-1   | Warning          | LUT drives async reset alert | 2      |
++-----------+------------------+------------------------------+--------+
 
 2. REPORT DETAILS
 -----------------
@@ -5035,27 +5035,27 @@ Related violations: <none>
 
 LUTAR-1#1 Warning
 LUT drives async reset alert  
-LUT cell DB_RST/inst_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) key_de/FSM_sequential_state_reg[0]/CLR,
-key_de/FSM_sequential_state_reg[1]/CLR, key_de/been_break_reg/CLR,
-key_de/been_extend_reg/CLR, key_de/been_ready_reg/CLR,
-key_de/key_down_reg[0]/CLR, key_de/key_down_reg[100]/CLR,
-key_de/key_down_reg[101]/CLR, key_de/key_down_reg[102]/CLR,
-key_de/key_down_reg[103]/CLR, key_de/key_down_reg[104]/CLR,
-key_de/key_down_reg[105]/CLR, key_de/key_down_reg[106]/CLR,
-key_de/key_down_reg[107]/CLR, key_de/key_down_reg[108]/CLR
+LUT cell DB_RST/inst_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) key_de/inst/inst/FSM_onehot_state_reg[6]/CLR,
+key_de/inst/inst/is_break_reg/PRE, key_de/inst/inst/is_extend_reg/CLR,
+key_de/inst/inst/key_in_reg[0]/CLR, key_de/inst/inst/key_in_reg[1]/CLR,
+key_de/inst/inst/key_in_reg[2]/CLR, key_de/inst/inst/key_in_reg[3]/CLR,
+key_de/inst/inst/key_in_reg[4]/CLR, key_de/inst/inst/key_in_reg[5]/CLR,
+key_de/inst/inst/key_in_reg[6]/CLR, key_de/inst/inst/key_in_reg[7]/CLR,
+key_de/inst/inst/tx_data_reg[1]/CLR, key_de/inst/inst/tx_data_reg[7]/CLR,
+key_de/inst/inst/tx_valid_reg/CLR, key_de/inst/inst/valid_reg/CLR
  (the first 15 of 626 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
 LUTAR-1#2 Warning
 LUT drives async reset alert  
-LUT cell SM/x[9]_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) A/pwm_0/PWM_reg/CLR, A/pwm_0/count_reg[0]/CLR, A/pwm_0/count_reg[10]/CLR,
-A/pwm_0/count_reg[11]/CLR, A/pwm_0/count_reg[12]/CLR,
-A/pwm_0/count_reg[13]/CLR, A/pwm_0/count_reg[14]/CLR,
-A/pwm_0/count_reg[15]/CLR, A/pwm_0/count_reg[16]/CLR,
-A/pwm_0/count_reg[17]/CLR, A/pwm_0/count_reg[18]/CLR,
-A/pwm_0/count_reg[19]/CLR, A/pwm_0/count_reg[1]/CLR,
-A/pwm_0/count_reg[20]/CLR, A/pwm_0/count_reg[21]/CLR
- (the first 15 of 33 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
+LUT cell SM/x[9]_i_1, with 2 or more inputs, drives asynchronous preset/clear pin(s) A/pwm_0/count_reg[25]/CLR, A/pwm_0/count_reg[26]/CLR,
+A/pwm_0/count_reg[27]/CLR, A/pwm_0/count_reg[28]/CLR,
+A/pwm_0/count_reg[29]/CLR, A/pwm_0/count_reg[2]/CLR,
+A/pwm_0/count_reg[30]/CLR, A/pwm_0/count_reg[31]/CLR,
+A/pwm_0/count_reg[3]/CLR, A/pwm_0/count_reg[4]/CLR,
+A/pwm_0/count_reg[5]/CLR, A/pwm_0/count_reg[6]/CLR,
+A/pwm_0/count_reg[7]/CLR, A/pwm_0/count_reg[8]/CLR,
+A/pwm_0/count_reg[9]/CLR (the first 15 of 33 listed). The LUT may glitch and trigger an unexpected reset, even if it is a properly timed path.
 Related violations: <none>
 
 

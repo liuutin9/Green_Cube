@@ -1,0 +1,38 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/liuut/Desktop/Green_Cube/Green_Cube/Green_Cube.gen/sources_1/ip/KeyboardCtrl_0/src/Ps2Interface.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Ps2Interface
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/liuut/Desktop/Green_Cube/Green_Cube/Green_Cube.gen/sources_1/ip/KeyboardCtrl_0/src/KeyboardCtrl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module KeyboardCtrl
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/liuut/Desktop/Green_Cube/Green_Cube/Green_Cube.gen/sources_1/ip/KeyboardCtrl_0/sim/KeyboardCtrl_0.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module KeyboardCtrl_0
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/liuut/Desktop/Green_Cube/KeyboardDecoder.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module KeyboardDecoder
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/liuut/Desktop/Green_Cube/audio.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Audio
+INFO: [VRFC 10-311] analyzing module Decoder
+INFO: [VRFC 10-311] analyzing module PWM_gen
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/liuut/Desktop/Green_Cube/clk_div.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clk_div
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/liuut/Desktop/Green_Cube/clk_floor.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clk_floor
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/liuut/Desktop/Green_Cube/clk_vga.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module clk_vga
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/liuut/Desktop/Green_Cube/cover.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module cover
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/liuut/Desktop/Green_Cube/debounce.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module debounce
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/liuut/Desktop/Green_Cube/floor.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module floor_gen
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/liuut/Desktop/Green_Cube/onepulse.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module onepulse
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/liuut/Desktop/Green_Cube/pixel_gen.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pixel_gen
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/liuut/Desktop/Green_Cube/record.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module record
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/liuut/Desktop/Green_Cube/slime_move.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module slime_move
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/liuut/Desktop/Green_Cube/vga_controller.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module vga_controller
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/liuut/Desktop/Green_Cube/top.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module Top
+INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/liuut/Desktop/Green_Cube/Green_Cube/Green_Cube.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
